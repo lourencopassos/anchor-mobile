@@ -1,0 +1,12 @@
+{
+  "title": "Configurações",
+  "reminders": {
+    "title": "Lembretes de Check-in",
+    "enable": "Ativar Lembretes",
+    "enableDescription": "Receba notificações quando for hora de fazer check-in",
+    "leadTime": "Antecedência do Lembrete",
+    "leadTimeDescription": "Substituir o tempo padrão de lembrete para todos os compromissos",
+    "useCommitmentDefault": "Usar configuração do compromisso",
+    "infoText": "Lembretes ajudam você a manter o foco nos seus compromissos. Você pode definir um horário preferido de check-in para cada compromisso durante a criação."
+  }
+}

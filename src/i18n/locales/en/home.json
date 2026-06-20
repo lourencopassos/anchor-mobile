@@ -1,0 +1,83 @@
+{
+  "todaysFocusLabel": "TODAY'S FOCUS",
+  "good_morning": "Good morning",
+  "good_afternoon": "Good afternoon",
+  "good_evening": "Good evening",
+  "todaysFocus": "Today's Focus",
+  "checkedIn": "Checked in",
+  "keepStreak": "Keep your {{count}} day streak!",
+  "greatJob": "Great job! Come back tomorrow",
+  "stats": {
+    "activeCommitments": "Active",
+    "completedCommitments": "Completed",
+    "currentStreak": "Streak",
+    "successRate": "Success"
+  },
+  "sections": {
+    "activeCommitments": "Active Commitments",
+    "recentActivity": "Recent Activity"
+  },
+  "empty": {
+    "title": "Start Your Journey",
+    "subtitle": "Create your first commitment to begin tracking your progress and building better habits.",
+    "createFirst": "Create First Commitment"
+  },
+  "features": {
+    "stake": {
+      "title": "Stake Your Commitment",
+      "description": "Put money behind your goals"
+    },
+    "partners": {
+      "title": "Accountability Partners",
+      "description": "Get support from friends"
+    },
+    "progress": {
+      "title": "Track Progress",
+      "description": "Daily check-ins & streaks"
+    }
+  },
+  "actions": {
+    "seeAll": "See all",
+    "createAnother": "Create another commitment"
+  },
+  "community": {
+    "title": "Your Support Network",
+    "supporting": "Supporting",
+    "recentActivity": "Recent Activity",
+    "noActivity": "No recent activity",
+    "noActivitySubtitle": "Activity from your network will appear here",
+    "viewAll": "View all activity",
+    "peopleCount": "{{count}} person",
+    "peopleCount_other": "{{count}} people",
+    "emptyTitle": "Build Your Network",
+    "emptySubtitle": "Accept invites or ask friends for their commitment links"
+  },
+  "invites": {
+    "title": "You've Been Invited",
+    "subtitle": "{{name}} wants your support",
+    "accept": "Accept",
+    "decline": "Decline",
+    "declineConfirm": "Decline this invite?",
+    "declineMessage": "You can always be invited again later."
+  },
+  "returnUser": {
+    "title": "Welcome Back!",
+    "subtitle": "You've completed {{count}} commitment. Ready for another?",
+    "subtitle_other": "You've completed {{count}} commitments. Ready for another?",
+    "successRate": "{{rate}}% success rate",
+    "createNew": "Start New Commitment",
+    "viewHistory": "View Past Commitments"
+  },
+  "activity": {
+    "checkin": "Checked in",
+    "checkinCompleted": "checked in",
+    "checkinMissed": "missed check-in",
+    "streakMilestone": "{{count}} day streak!",
+    "streakMilestone_other": "{{count}} day streak!",
+    "supporterJoined": "joined as supporter",
+    "milestone": "Milestone reached",
+    "verification": "Verified check-in",
+    "message": "sent a message",
+    "completed": "completed their commitment!"
+  }
+}

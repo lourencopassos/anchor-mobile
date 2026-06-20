@@ -1,0 +1,55 @@
+{
+  "title": "Join as Supporter",
+  "loading": "Loading invitation...",
+  "invitedBy": "{{name}} invited you",
+  "duration": "Duration",
+  "stakeAmount": "Stake Amount",
+  "ifBroken": "If commitment is broken",
+  "toCharity": "to charity",
+  "toSupporters": "to supporters",
+  "remainingUses": "{{count}} spots remaining",
+  "joinAsSupporter": "Join as Supporter",
+  "signUpToJoin": "Sign Up to Join",
+  "alreadyHaveAccount": "Already have an account?",
+  "login": "Log in",
+  "roles": {
+    "observer": "Observer",
+    "encourager": "Encourager",
+    "verifier": "Verifier"
+  },
+  "roleDescriptions": {
+    "observer": "You can view progress and show your support through the app.",
+    "encourager": "You can send encouraging messages and react to check-ins.",
+    "verifier": "You can verify check-ins and help ensure accountability."
+  },
+  "success": {
+    "title": "You're In!",
+    "subtitle": "You're now supporting {{name}}'s commitment",
+    "supportingAs": "Supporting as {{role}}",
+    "viewCommitment": "View Commitment"
+  },
+  "errors": {
+    "title": "Something went wrong",
+    "invalidLink": "This invitation link is invalid.",
+    "linkNotFound": "This invitation link was not found.",
+    "linkExpired": "This invitation link has expired.",
+    "linkFull": "This invitation link has reached its maximum uses.",
+    "alreadySupporter": "You're already supporting this commitment.",
+    "claimFailed": "Failed to join. Please try again."
+  },
+  "shareableLink": {
+    "title": "Shareable Link",
+    "generate": "Generate Link",
+    "copy": "Copy Link",
+    "copied": "Link copied!",
+    "share": "Share Link",
+    "usage": "{{current}} of {{max}} uses",
+    "unlimited": "Unlimited uses",
+    "expires": "Expires {{date}}",
+    "deactivate": "Deactivate Link",
+    "deactivated": "Link deactivated",
+    "selectRole": "Select role for new supporters",
+    "maxUses": "Maximum uses (optional)",
+    "maxUsesHint": "Leave empty for unlimited"
+  }
+}

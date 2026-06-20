@@ -1,0 +1,31 @@
+{
+  "title": "Ativar Conta",
+  "validating": "Validando convite...",
+  "invalidToken": "Este link de convite é inválido ou foi revogado.",
+  "expiredToken": "Este convite expirou. Por favor, peça um novo convite.",
+  "alreadyClaimed": "Esta conta já foi ativada. Por favor, faça login.",
+  "errorTitle": "Convite Inválido",
+  "welcomeTitle": "{{name}} te convidou",
+  "welcomeSubtitle": "Complete sua conta para se tornar um apoiador",
+  "displayName": "Seu Nome",
+  "displayNamePlaceholder": "Como devemos te chamar?",
+  "displayNameRequired": "Por favor, insira seu nome",
+  "createAccount": "Criar Conta",
+  "successTitle": "Conta Criada!",
+  "successSubtitle": "Agora você pode responder ao convite",
+  "wantsYouToSupport": "quer que você apoie seu compromisso",
+  "commitment": "Compromisso",
+  "yourRole": "Seu Papel",
+  "accept": "Aceitar Convite",
+  "decline": "Recusar",
+  "roles": {
+    "observer": "Observador",
+    "encourager": "Incentivador",
+    "verifier": "Verificador"
+  },
+  "roleDescriptions": {
+    "observer": "Você poderá ver o progresso e torcer por eles.",
+    "encourager": "Você pode enviar mensagens de apoio para ajudá-los a manter a motivação.",
+    "verifier": "Você ajudará a verificar os check-ins diários e mantê-los responsáveis."
+  }
+}

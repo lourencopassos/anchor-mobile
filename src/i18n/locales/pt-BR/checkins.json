@@ -1,0 +1,48 @@
+{
+  "title": "Registro",
+  "checkInToday": "Registrar hoje",
+  "alreadyCheckedIn": "Você já registrou hoje",
+  "pendingSync": "Sincronização pendente",
+  "status": {
+    "completed": "Concluído",
+    "skipped": "Pulado",
+    "missed": "Perdido",
+    "upcoming": "Próximo"
+  },
+  "evidenceType": {
+    "selfReport": "Auto-relato",
+    "photo": "Foto como Evidência",
+    "manual": "Entrada Manual"
+  },
+  "notes": "Notas (opcional)",
+  "notesPlaceholder": "Como foi hoje?",
+  "submit": "Enviar Registro",
+  "success": "Registro salvo!",
+  "streak": {
+    "current": "Sequência Atual",
+    "longest": "Maior Sequência",
+    "days": "{{count}} dias",
+    "personalBest": "Recorde Pessoal!"
+  },
+  "calendar": {
+    "title": "Histórico de Registros",
+    "tapToView": "Toque em um dia para ver detalhes"
+  },
+  "offline": {
+    "title": "Você está offline",
+    "message": "Seu registro será salvo e sincronizado quando você voltar a ficar online"
+  },
+  "reactions": {
+    "title": "Reagir a este registro",
+    "addReaction": "Adicionar reação"
+  },
+  "comments": {
+    "title": "Comentários",
+    "viewAll": "Ver todos os {{count}} comentários",
+    "placeholder": "Escreva um comentário...",
+    "send": "Enviar",
+    "collapse": "Ocultar",
+    "deleteTitle": "Excluir Comentário",
+    "deleteConfirm": "Tem certeza que deseja excluir este comentário?"
+  }
+}

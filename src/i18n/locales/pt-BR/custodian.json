@@ -1,0 +1,152 @@
+{
+  "title": "Custodiante",
+  "summary": {
+    "pendingDeposits": "Depósitos Pendentes",
+    "pendingSettlements": "Pagamentos Pendentes",
+    "totalPending": "Total Pendente",
+    "noPendingItems": "Nenhum item pendente"
+  },
+  "tabs": {
+    "deposits": "Depósitos",
+    "settlements": "Pagamentos"
+  },
+  "deposits": {
+    "title": "Depósitos Pendentes",
+    "empty": "Nenhum depósito pendente",
+    "emptyDescription": "Você verá depósitos aqui quando usuários criarem compromissos com você como custodiante.",
+    "status": {
+      "awaitingPayment": "Aguardando Pagamento",
+      "paymentMarked": "Pagamento Marcado",
+      "confirmed": "Confirmado",
+      "rejected": "Rejeitado"
+    },
+    "detail": {
+      "title": "Detalhes do Depósito",
+      "from": "De",
+      "amount": "Valor",
+      "commitment": "Compromisso",
+      "dateRange": "Período",
+      "createdAt": "Criado em",
+      "markedPaidAt": "Marcado como Pago",
+      "creatorNotes": "Notas do Criador",
+      "creatorReference": "Referência",
+      "supporters": "Apoiadores",
+      "supporterCount_one": "{{count}} apoiador",
+      "supporterCount_other": "{{count}} apoiadores",
+      "perSupporter": "cada um recebe",
+      "noSupporters": "Nenhum apoiador ainda",
+      "distribution": "Distribuição",
+      "charityPercent": "Para Caridade",
+      "supportersPercent": "Para Apoiadores",
+      "motivation": "Motivação",
+      "timeline": "Linha do Tempo",
+      "timelineCreated": "Criado",
+      "timelinePaymentMarked": "Pagamento Marcado",
+      "timelineConfirmed": "Confirmado",
+      "loadError": "Falha ao carregar detalhes do depósito",
+      "retry": "Tentar novamente"
+    },
+    "actions": {
+      "confirmReceived": "Confirmar Recebimento",
+      "reject": "Rejeitar Depósito",
+      "confirmTitle": "Confirmar Depósito",
+      "confirmMessage": "Você recebeu o pagamento de {{amount}} de {{name}}?",
+      "confirmButton": "Sim, Recebi",
+      "confirmReferencePlaceholder": "ex., ID do recibo PIX",
+      "confirmReferenceLabel": "Referência (opcional)",
+      "confirmNotesLabel": "Notas (opcional)",
+      "confirmNotesPlaceholder": "Adicionar notas",
+      "rejectTitle": "Rejeitar Depósito",
+      "rejectMessage": "Por que você está rejeitando este depósito?",
+      "rejectReasonLabel": "Motivo (obrigatório)",
+      "rejectPlaceholder": "Digite o motivo da rejeição",
+      "rejectButton": "Rejeitar",
+      "cancel": "Cancelar"
+    },
+    "success": {
+      "confirmed": "Depósito confirmado! O compromisso está ativo.",
+      "rejected": "Depósito rejeitado. O criador será notificado."
+    }
+  },
+  "settlements": {
+    "title": "Pagamentos Pendentes",
+    "empty": "Nenhum pagamento pendente",
+    "emptyDescription": "Tarefas de pagamento aparecerão aqui quando compromissos falharem.",
+    "status": {
+      "pending": "Pendente",
+      "completed": "Concluído",
+      "failed": "Falhou"
+    },
+    "recipientType": {
+      "supporter": "Apoiador",
+      "charity": "Caridade",
+      "appPool": "Plataforma"
+    },
+    "detail": {
+      "title": "Detalhes do Pagamento",
+      "recipient": "Destinatário",
+      "amount": "Valor",
+      "payoutDetails": "Detalhes do Pagamento",
+      "pixKey": "Chave PIX",
+      "commitmentFailed": "Compromisso Falhou",
+      "failureReason": "Motivo da Falha",
+      "failedAt": "Falhou em",
+      "createdAt": "Criado em",
+      "attemptCount": "Tentativas"
+    },
+    "actions": {
+      "markCompleted": "Marcar Concluído",
+      "markFailed": "Marcar Falhou",
+      "completeTitle": "Concluir Pagamento",
+      "completeMessage": "Você enviou {{amount}} para {{recipient}}?",
+      "completeButton": "Sim, Concluído",
+      "externalRefPlaceholder": "ID da Transação (opcional)",
+      "notesPlaceholder": "Notas (opcional)",
+      "failTitle": "Marcar como Falho",
+      "failMessage": "Por que este pagamento não pôde ser concluído?",
+      "failPlaceholder": "Digite o motivo",
+      "failButton": "Marcar Falho"
+    },
+    "success": {
+      "completed": "Pagamento marcado como concluído.",
+      "failed": "Pagamento marcado como falho."
+    }
+  },
+  "creatorDeposit": {
+    "title": "Depósito Necessário",
+    "description": "Seu compromisso requer um depósito a ser confirmado pelo seu custodiante.",
+    "status": {
+      "awaitingPayment": "Aguardando seu pagamento",
+      "paymentMarked": "Aguardando confirmação do custodiante",
+      "confirmed": "Depósito confirmado - compromisso ativo!",
+      "rejected": "Depósito rejeitado"
+    },
+    "payTo": "Pagar para",
+    "amount": "Valor",
+    "pixKey": "Chave PIX",
+    "instructions": "Transfira o valor acima para seu custodiante e depois marque como pago.",
+    "markPaid": "Eu Fiz o Pagamento",
+    "markPaidTitle": "Confirmar Pagamento",
+    "markPaidMessage": "Você enviou {{amount}} para {{custodian}}?",
+    "markPaidButton": "Sim, Eu Paguei",
+    "referencePlaceholder": "ID da Transação (opcional)",
+    "notesPlaceholder": "Notas para o custodiante (opcional)",
+    "rejectedMessage": "Seu custodiante rejeitou o depósito. Motivo: {{reason}}",
+    "contactCustodian": "Entre em contato com seu custodiante para mais informações.",
+    "loadError": "Falha ao carregar status do depósito",
+    "retry": "Tentar novamente",
+    "redirecting": "Redirecionando para o compromisso...",
+    "backToCommitment": "Voltar ao Compromisso",
+    "cancel": "Cancelar"
+  },
+  "wizard": {
+    "stepCustodian": "Custodiante",
+    "selectCustodian": "Selecionar um Custodiante",
+    "custodianDescription": "Um custodiante irá guardar sua aposta e gerenciar pagamentos manualmente. Isso é opcional.",
+    "searchPlaceholder": "Buscar por email",
+    "noCustodian": "Sem custodiante (automático)",
+    "selectedCustodian": "Custodiante Selecionado",
+    "remove": "Remover",
+    "custodianInfo": "Seu custodiante precisará confirmar o recebimento do seu depósito antes que seu compromisso se torne ativo."
+  }
+}

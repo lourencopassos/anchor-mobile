@@ -1,0 +1,285 @@
+{
+  "title": "Compromissos",
+  "myCommitments": "Meus Compromissos",
+  "tabs": {
+    "mine": "Meus",
+    "supporting": "Apoiando",
+    "custodian": "Custodiante"
+  },
+  "createNew": "Criar Novo Compromisso",
+  "noCommitments": "Você ainda não tem compromissos",
+  "startJourney": "Comece sua jornada",
+  "filter": {
+    "all": "Todos",
+    "active": "Ativos",
+    "completed": "Concluídos",
+    "broken": "Quebrados"
+  },
+  "state": {
+    "draft": "Rascunho",
+    "pending_payment": "Pagamento Pendente",
+    "active": "Ativo",
+    "completed": "Concluído",
+    "broken": "Quebrado",
+    "cancelled": "Cancelado"
+  },
+  "pending": {
+    "completePayment": "Complete o pagamento para ativar",
+    "sectionTitle": "Aguardando Ativação"
+  },
+  "templates": {
+    "quit_smoking": "Parar de Fumar",
+    "exercise": "Exercício",
+    "meditation": "Meditação",
+    "diet": "Dieta",
+    "sleep": "Sono",
+    "custom": "Personalizado"
+  },
+  "wizard": {
+    "step1": "Escolher Modelo",
+    "step2": "Definir Datas",
+    "stepFrequency": "Frequência de Check-in",
+    "stepSchedule": "Horário e Lembretes",
+    "stepMotivation": "Sua Motivação",
+    "stepStake": "Definir Valor",
+    "stepDistribution": "Distribuição",
+    "step5Supporters": "Adicionar Apoiadores",
+    "step6Verification": "Configurações de Verificação",
+    "stepReview": "Revisar",
+    "verificationHelper": "Escolha quem pode votar para marcar seu compromisso como falha",
+    "verificationAuthority": "Verificação",
+    "next": "Próximo",
+    "back": "Voltar",
+    "startDate": "Data de Início",
+    "endDate": "Data de Término",
+    "selectStartDate": "Selecione a data de início",
+    "selectEndDate": "Selecione a data de término",
+    "startDateHelper": "Pode iniciar hoje ou depois",
+    "endDateHelper": "Deve ser após a data de início",
+    "endDateError": "Data de término deve ser após a data de início",
+    "stakeAmount": "Valor da Aposta",
+    "stakeRange": "R$25 - R$5.000",
+    "charityPercent": "% para Caridade",
+    "supportersPercent": "% para Apoiadores",
+    "supportersCount": "Apoiadores",
+    "supportersHelper": "Convide pessoas para te ajudar a manter o compromisso (opcional)",
+    "supportersInfo": "Apoiadores podem verificar seus check-ins e votar no resultado do seu compromisso. Você pode adicionar mais apoiadores depois.",
+    "reviewTitle": "Revise Seu Compromisso",
+    "createCommitment": "Criar Compromisso",
+    "createError": "Falha ao criar compromisso. Tente novamente.",
+    "cpf": "CPF",
+    "cpfPlaceholder": "000.000.000-00",
+    "cpfRequired": "Obrigatório para pagamentos brasileiros",
+    "cpfInvalid": "Digite um CPF válido com 11 dígitos",
+    "country": "Seu País",
+    "countryHelper": "Determina os métodos de pagamento disponíveis",
+    "paymentErrorTitle": "Problema no Pagamento",
+    "paymentErrorMessage": "Seu compromisso foi criado, mas não conseguimos processar o pagamento. Não se preocupe - você pode completar o pagamento depois.",
+    "paymentErrorRetry": "Vá para sua lista de compromissos para tentar o pagamento novamente quando estiver pronto.",
+    "goToCommitments": "Ir para Compromissos",
+    "stakeLockInfoTitle": "Importante",
+    "stakeLockInfo": "Seu depósito será bloqueado assim que este compromisso for criado. Se você falhar, o valor será distribuído para caridade e apoiadores conforme suas configurações.",
+    "quickSelect": "Seleção Rápida",
+    "frequency": "Frequência",
+    "preferredTime": "Horário Preferido",
+    "motivation": "Motivação",
+    "template": "Modelo"
+  },
+  "frequency": {
+    "title": "Com que frequência você vai fazer check-in?",
+    "subtitle": "Escolha sua frequência de check-in. Você pode compensar dias perdidos dentro de cada período.",
+    "selectAtLeastOne": "Por favor, selecione pelo menos um dia",
+    "lockedWarning": "A frequência não pode ser alterada após a ativação",
+    "daily": {
+      "title": "Todos os Dias",
+      "description": "Fazer check-in diariamente"
+    },
+    "times_per_week": {
+      "title": "Vezes por Semana",
+      "description": "Fazer check-in várias vezes por semana"
+    },
+    "times_per_month": {
+      "title": "Vezes por Mês",
+      "description": "Fazer check-in várias vezes por mês"
+    },
+    "specific_days": {
+      "title": "Dias Específicos",
+      "description": "Fazer check-in nos dias selecionados"
+    },
+    "targetCount": "Check-ins desejados",
+    "selectDays": "Selecione os dias",
+    "makeUpInfo": {
+      "title": "Check-ins de Compensação",
+      "description": "Você pode fazer check-in em qualquer dia para compensar dias perdidos dentro do mesmo período."
+    },
+    "days": {
+      "mon": "Seg",
+      "tue": "Ter",
+      "wed": "Qua",
+      "thu": "Qui",
+      "fri": "Sex",
+      "sat": "Sáb",
+      "sun": "Dom"
+    },
+    "formatted": {
+      "daily": "Todos os dias",
+      "timesPerWeek": "{{count}}x por semana",
+      "timesPerMonth": "{{count}}x por mês",
+      "noDaysSelected": "Nenhum dia selecionado",
+      "unknown": "Desconhecido"
+    }
+  },
+  "schedule": {
+    "title": "Defina Seu Horário",
+    "subtitle": "Configure lembretes para ajudá-lo a manter o foco",
+    "setPreferredTime": "Definir horário preferido de check-in",
+    "setPreferredTimeDesc": "Receba lembretes no horário escolhido",
+    "preferredTimeLabel": "Horário do check-in",
+    "noPreference": "Sem preferência",
+    "reminderBefore": "Lembrar-me antes",
+    "reminderBeforeDesc": "Receba um aviso antes do seu horário de check-in",
+    "reminderAtTime": "Lembrar no horário exato",
+    "reminderAtTimeDesc": "Seja notificado exatamente quando for a hora",
+    "minutesBefore": "{{count}} minutos antes",
+    "noReminders": "Nenhum horário preferido definido. Você pode fazer check-in a qualquer momento.",
+    "softEnforcement": {
+      "title": "Lembretes Suaves",
+      "description": "Os lembretes são opcionais e não afetam seu compromisso. Você pode fazer check-in a qualquer momento."
+    }
+  },
+  "motivation": {
+    "title": "Por que isso é importante para você?",
+    "subtitle": "Escreva uma nota pessoal para se lembrar por que você está assumindo este compromisso (opcional)",
+    "quickPrompts": "Toque para adicionar",
+    "placeholder": "Este compromisso é importante para mim porque...",
+    "characterCount": "{{current}}/{{max}}",
+    "optional": "Opcional, mas recomendado",
+    "benefits": {
+      "title": "Por Que Isso Ajuda",
+      "description": "Ter uma razão pessoal escrita aumenta suas chances de sucesso. Ela te lembra da sua motivação quando as coisas ficam difíceis."
+    },
+    "privacyNote": "Sua motivação é privada e visível apenas para você"
+  },
+  "detail": {
+    "progress": "Progresso",
+    "supporters": "Apoiadores",
+    "activity": "Atividade",
+    "history": "Histórico",
+    "checkIn": "Registrar",
+    "currentCycle": "Ciclo Atual",
+    "daysRemaining": "{{count}} dias restantes",
+    "daysRemaining_one": "{{count}} dia restante",
+    "restart": "Reiniciar Compromisso",
+    "cannotRestart": "Não é possível reiniciar este compromisso",
+    "timeline": {
+      "created": "Criado",
+      "started": "Iniciou",
+      "starts": "Inicia",
+      "ends": "Termina",
+      "now": "Agora"
+    },
+    "future": {
+      "startsIn": "Começa em {{count}} dias",
+      "startsIn_one": "Começa em {{count}} dia",
+      "startsToday": "Começa hoje!",
+      "startsTomorrow": "Começa amanhã",
+      "getReady": "Prepare-se! Seu compromisso começa em breve.",
+      "journey": "jornada de {{count}} dias",
+      "journey_one": "jornada de {{count}} dia"
+    },
+    "metadata": {
+      "title": "Detalhes",
+      "duration": "Duração",
+      "durationDays": "{{count}} dias",
+      "durationDays_one": "{{count}} dia",
+      "verification": "Verificação",
+      "createdOn": "Criado em",
+      "timezone": "Fuso horário",
+      "startDate": "Data de Início",
+      "endDate": "Data de Término"
+    },
+    "preparation": {
+      "title": "Preparação",
+      "stakeDeposited": "Depósito realizado",
+      "inviteSupporters": "Convidar apoiadores",
+      "setupReminders": "Configurar lembretes"
+    }
+  },
+  "state": {
+    "scheduled": "Agendado"
+  },
+  "restart": {
+    "title": "Reiniciar Compromisso",
+    "selectMode": "Selecione o Modo de Recuperação",
+    "fullReset": "Reinício Total",
+    "fullResetDesc": "Começar do zero com novas datas e aposta",
+    "sameRules": "Mesmas Regras",
+    "sameRulesDesc": "Manter a mesma aposta e regras, apenas novas datas",
+    "adjusted": "Tentativa Ajustada",
+    "adjustedDesc": "Modificar frequência ou aposta para esta tentativa",
+    "confirm": "Reiniciar Compromisso",
+    "error": "Falha ao reiniciar compromisso. Tente novamente.",
+    "adjustFrequency": "Ajustar Frequência",
+    "frequencyRecommendationTitle": "Considere uma frequência mais fácil",
+    "frequencyRecommendationDesc": "Sua tentativa anterior era {{previous}}. Recomendamos tentar {{recommended}} desta vez.",
+    "useRecommendation": "Usar frequência recomendada",
+    "newFrequency": "Nova frequência"
+  },
+  "payout": {
+    "title": "Distribuição do Stake",
+    "charity": "Instituição",
+    "supporters": "Apoiadores",
+    "total": "Total Distribuído",
+    "complete": "Todos os pagamentos concluídos",
+    "processing": "Pagamentos em andamento...",
+    "pending": "Pendente",
+    "completed": "Concluído",
+    "failed": "Falhou"
+  },
+  "payment": {
+    "pixTitle": "Pagar com PIX",
+    "pixExpires": "Expira em {{minutes}} minutos",
+    "pixCopyPaste": "Código PIX Copia e Cola",
+    "pixInstructions": "Escaneie o QR code ou copie o código para pagar no app do seu banco",
+    "pixDismiss": "Vou pagar depois"
+  },
+  "reportFailure": {
+    "button": "Eu Falhei",
+    "title": "Reportar Falha",
+    "message": "Tem certeza que deseja reportar que você falhou neste compromisso? Esta ação não pode ser desfeita e seu depósito será perdido.",
+    "reasonLabel": "O que aconteceu? (opcional)",
+    "reasonPlaceholder": "Conte-nos o que aconteceu...",
+    "confirm": "Sim, Eu Falhei",
+    "cancel": "Cancelar",
+    "success": "Compromisso marcado como falha"
+  },
+  "verification": {
+    "selected": "Selecionado",
+    "requiresSupporters": "Requer pelo menos um apoiador",
+    "noSupporters": "Nenhum apoiador adicionado",
+    "oneSupporter": "1 apoiador adicionado",
+    "multipleSupporters": "{{count}} apoiadores adicionados",
+    "infoTitle": "Como funciona a verificação",
+    "infoText": "Você sempre pode reportar sua própria falha. Esta configuração controla se seus apoiadores também podem votar para marcar seu compromisso como falha.",
+    "self_only": {
+      "title": "Apenas Auto-Reporte",
+      "short": "Apenas Eu",
+      "description": "Só você pode reportar se falhou. Apoiadores podem encorajar mas não podem votar."
+    },
+    "single_supporter": {
+      "title": "Qualquer Apoiador",
+      "short": "Qualquer Um",
+      "description": "Qualquer apoiador pode votar para marcar seu compromisso como falha."
+    },
+    "majority": {
+      "title": "Voto da Maioria",
+      "short": "Maioria",
+      "description": "Mais da metade dos seus apoiadores devem votar para marcar como falha."
+    },
+    "unanimous": {
+      "title": "Voto Unânime",
+      "short": "Unânime",
+      "description": "Todos os apoiadores devem concordar para marcar seu compromisso como falha."
+    }
+  }
+}

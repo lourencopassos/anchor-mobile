@@ -1,0 +1,67 @@
+{
+  "title": "Notificações",
+  "markAllRead": "Marcar todas como lidas",
+  "noNotifications": "Nenhuma notificação ainda",
+  "unread": "{{count}} não lidas",
+  "unreadCount": "{{count}} não lidas",
+  "unreadCount_one": "{{count}} não lida",
+  "unreadCount_other": "{{count}} não lidas",
+  "empty": "Sem notificações",
+  "emptyDescription": "Você verá suas notificações aqui quando tiver compromissos ativos",
+  "types": {
+    "commitment_activated": {
+      "title": "Seu compromisso está ativo",
+      "body": "Boa sorte com '{{commitmentName}}'! Sua jornada de {{durationDays}} dias começa hoje. Seus apoiadores estão torcendo por você."
+    },
+    "commitment_restarted": {
+      "title": "Um novo capítulo começa",
+      "body": "Você recomeçou '{{commitmentName}}'. Cada recomeço é uma escolha de continuar. Seus apoiadores foram convidados a se juntar a você novamente."
+    },
+    "checkin_missed": {
+      "title": "Um dia sem registro",
+      "body": "Ontem passou sem registrar progresso em '{{commitmentName}}'. Gostaria de refletir sobre o que aconteceu?"
+    },
+    "evaluation_summary": {
+      "title": "Sua semana em revisão",
+      "body": "Esta semana: {{completedCount}} registros concluídos de {{totalDays}} dias. Sequência atual: {{streakCurrent}} dias."
+    },
+    "supporter_invited": {
+      "title": "Você foi convidado a apoiar alguém",
+      "body": "{{inviterName}} pediu que você seja apoiador do compromisso '{{commitmentName}}'. Seu apoio pode fazer uma grande diferença."
+    },
+    "check_in_verified": {
+      "title": "Seu check-in foi verificado",
+      "body": "{{supporterName}} verificou seu check-in em '{{commitmentName}}'. Continue assim!"
+    },
+    "check_in_disputed": {
+      "title": "Um check-in foi contestado",
+      "body": "{{supporterName}} contestou seu check-in em '{{commitmentName}}'. Entre em contato para entender as preocupações."
+    },
+    "verification_pending": {
+      "title": "Novo check-in para verificar",
+      "body": "{{ownerName}} enviou um check-in para '{{commitmentName}}'. Revise em até 48 horas."
+    },
+    "reaction_received": {
+      "title": "{{supporterName}} reagiu ao seu check-in",
+      "body": "{{supporterName}} reagiu {{emoji}} ao seu check-in de {{checkInDate}}"
+    },
+    "comment_received": {
+      "title": "{{supporterName}} comentou no seu check-in",
+      "body": "{{supporterName}} deixou um comentário no seu check-in de {{checkInDate}}"
+    },
+    "peer_reaction": {
+      "title": "{{supporterName}} também reagiu",
+      "body": "{{supporterName}} também reagiu {{emoji}} ao check-in de {{ownerName}}"
+    },
+    "peer_comment": {
+      "title": "{{supporterName}} também comentou",
+      "body": "{{supporterName}} também comentou no check-in de {{ownerName}}"
+    }
+  },
+  "push": {
+    "permissionTitle": "Ativar Notificações Push",
+    "permissionMessage": "Receba lembretes e atualizações sobre seus compromissos",
+    "registrationFailed": "Falha ao registrar para notificações push. Você pode ativá-las depois nas configurações.",
+    "registrationSuccess": "Notificações push ativadas"
+  }
+}

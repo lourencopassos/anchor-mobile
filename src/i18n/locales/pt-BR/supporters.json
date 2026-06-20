@@ -1,0 +1,63 @@
+{
+  "title": "Apoiadores",
+  "invite": "Convidar Apoiador",
+  "noSupporters": "Nenhum apoiador ainda",
+  "inviteFirst": "Convide alguém para apoiar sua jornada",
+  "addSupporter": "Adicionar Apoiador",
+  "add": "Adicionar",
+  "cancel": "Cancelar",
+  "remove": "Remover",
+  "resend": "Reenviar",
+  "role": {
+    "observer": "Observador",
+    "observerDesc": "Pode ver seu progresso",
+    "encourager": "Incentivador",
+    "encouragerDesc": "Pode enviar mensagens",
+    "verifier": "Verificador",
+    "verifierDesc": "Pode verificar seus check-ins"
+  },
+  "state": {
+    "invited": "Convidado",
+    "active": "Ativo",
+    "declined": "Recusado",
+    "removed": "Removido"
+  },
+  "inviteModal": {
+    "title": "Convidar um Apoiador",
+    "emailOrPhone": "E-mail ou Telefone",
+    "selectRole": "Selecionar Função",
+    "send": "Enviar Convite",
+    "errorEmpty": "Digite um e-mail ou telefone",
+    "errorInvalid": "Digite um e-mail ou telefone válido",
+    "errorDuplicate": "Esta pessoa já foi adicionada"
+  },
+  "invitation": {
+    "received": "Você foi convidado a apoiar alguém",
+    "accept": "Aceitar",
+    "decline": "Recusar"
+  },
+  "activity": {
+    "title": "Atividade dos Apoiadores",
+    "loading": "Carregando atividade...",
+    "emptyTitle": "Nenhuma atividade ainda",
+    "emptySubtitle": "Reações, comentários e verificações dos seus apoiadores aparecerão aqui",
+    "errorTitle": "Não foi possível carregar a atividade",
+    "errorDefault": "Algo deu errado. Por favor, tente novamente.",
+    "reactedTo": "reagiu ao seu check-in",
+    "commentedOn": "comentou no seu check-in",
+    "verified": "verificou seu check-in",
+    "disputed": "contestou seu check-in",
+    "filters": {
+      "all": "Todos",
+      "reactions": "Reações",
+      "comments": "Comentários",
+      "verifications": "Verificações"
+    },
+    "groups": {
+      "today": "Hoje",
+      "yesterday": "Ontem",
+      "thisWeek": "Esta Semana",
+      "earlier": "Anteriores"
+    }
+  }
+}

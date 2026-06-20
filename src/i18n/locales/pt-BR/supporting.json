@@ -1,0 +1,104 @@
+{
+  "title": "Apoiando",
+  "filters": {
+    "all": "Todos",
+    "active": "Ativos",
+    "completed": "Concluídos"
+  },
+  "empty": {
+    "title": "Ainda não está apoiando ninguém",
+    "subtitle": "Quando alguém te convidar para apoiar seu compromisso, ele aparecerá aqui."
+  },
+  "card": {
+    "daysRemaining": "{{count}} dia restante",
+    "daysRemaining_other": "{{count}} dias restantes",
+    "pendingInvite": "Convite pendente",
+    "accept": "Aceitar",
+    "decline": "Recusar"
+  },
+  "role": {
+    "observer": "Observador",
+    "encourager": "Encorajador",
+    "verifier": "Verificador"
+  },
+  "detail": {
+    "title": "Compromisso",
+    "supporting": "Apoiando"
+  },
+  "progress": {
+    "overall": "Progresso Geral",
+    "completed": "Concluídos",
+    "completionRate": "Taxa de Conclusão",
+    "currentStreak": "Sequência Atual",
+    "started": "Início",
+    "ends": "Término"
+  },
+  "checkIn": {
+    "recentActivity": "Atividade Recente",
+    "seeAll": "Ver tudo",
+    "noCheckIns": "Nenhum Check-in Ainda",
+    "noCheckInsSubtitle": "Os check-ins aparecerão aqui quando o dono do compromisso começar a registrar.",
+    "status_completed": "Concluído",
+    "status_skipped": "Pulado",
+    "status_missed": "Perdido",
+    "detail": {
+      "title": "Detalhes do Check-in",
+      "notes": "Notas",
+      "reactions": "Reações",
+      "comments": "Comentários",
+      "noComments": "Sem comentários ainda",
+      "addComment": "Adicionar comentário..."
+    }
+  },
+  "actions": {
+    "addComment": "Comentar"
+  },
+  "verification": {
+    "title": "Verificações Pendentes",
+    "subtitle": "Revise check-ins das pessoas que você apoia",
+    "empty": {
+      "title": "Tudo em Dia",
+      "subtitle": "Você não tem verificações pendentes no momento."
+    },
+    "card": {
+      "checkIn": "Check-in",
+      "deadline": "Revisar até",
+      "timeLeft": "{{hours}}h restantes",
+      "urgent": "Urgente",
+      "evidence": {
+        "self_report": "Auto-reportado",
+        "photo": "Evidência fotográfica",
+        "manual": "Entrada manual"
+      }
+    },
+    "actions": {
+      "verify": "Verificar",
+      "dispute": "Contestar",
+      "skip": "Pular",
+      "verifyDescription": "Confirmar que este check-in é legítimo",
+      "disputeDescription": "Reportar este check-in como inválido",
+      "skipDescription": "Passar sem afetar o check-in"
+    },
+    "sheet": {
+      "title": "Revisar Check-in",
+      "verifyTitle": "Verificar Check-in",
+      "verifyMessage": "Confirmar marcará este check-in como concluído.",
+      "disputeTitle": "Contestar Check-in",
+      "disputeMessage": "Contestar marcará este check-in como perdido. Por favor, forneça um motivo.",
+      "skipTitle": "Pular Verificação",
+      "skipMessage": "Pular não afetará este check-in. Se ninguém verificar em 48 horas, será auto-verificado.",
+      "reasonPlaceholder": "Por que você está contestando este check-in?",
+      "reasonRequired": "Por favor, forneça um motivo para contestar"
+    },
+    "success": {
+      "verified": "Check-in verificado",
+      "disputed": "Check-in contestado",
+      "skipped": "Verificação pulada"
+    },
+    "error": {
+      "title": "Erro",
+      "message": "Falha ao enviar verificação. Por favor, tente novamente."
+    },
+    "badge": "{{count}} para revisar"
+  }
+}

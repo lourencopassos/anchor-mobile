@@ -1,0 +1,55 @@
+{
+  "title": "Participar como Apoiador",
+  "loading": "Carregando convite...",
+  "invitedBy": "{{name}} convidou voce",
+  "duration": "Duracao",
+  "stakeAmount": "Valor em Jogo",
+  "ifBroken": "Se o compromisso for quebrado",
+  "toCharity": "para caridade",
+  "toSupporters": "para apoiadores",
+  "remainingUses": "{{count}} vagas restantes",
+  "joinAsSupporter": "Participar como Apoiador",
+  "signUpToJoin": "Cadastre-se para Participar",
+  "alreadyHaveAccount": "Ja tem uma conta?",
+  "login": "Entrar",
+  "roles": {
+    "observer": "Observador",
+    "encourager": "Incentivador",
+    "verifier": "Verificador"
+  },
+  "roleDescriptions": {
+    "observer": "Voce pode ver o progresso e mostrar seu apoio pelo app.",
+    "encourager": "Voce pode enviar mensagens de incentivo e reagir aos check-ins.",
+    "verifier": "Voce pode verificar check-ins e ajudar a garantir a responsabilidade."
+  },
+  "success": {
+    "title": "Voce Esta Dentro!",
+    "subtitle": "Voce agora esta apoiando o compromisso de {{name}}",
+    "supportingAs": "Apoiando como {{role}}",
+    "viewCommitment": "Ver Compromisso"
+  },
+  "errors": {
+    "title": "Algo deu errado",
+    "invalidLink": "Este link de convite e invalido.",
+    "linkNotFound": "Este link de convite nao foi encontrado.",
+    "linkExpired": "Este link de convite expirou.",
+    "linkFull": "Este link de convite atingiu o numero maximo de usos.",
+    "alreadySupporter": "Voce ja esta apoiando este compromisso.",
+    "claimFailed": "Falha ao participar. Por favor, tente novamente."
+  },
+  "shareableLink": {
+    "title": "Link Compartilhavel",
+    "generate": "Gerar Link",
+    "copy": "Copiar Link",
+    "copied": "Link copiado!",
+    "share": "Compartilhar Link",
+    "usage": "{{current}} de {{max}} usos",
+    "unlimited": "Usos ilimitados",
+    "expires": "Expira em {{date}}",
+    "deactivate": "Desativar Link",
+    "deactivated": "Link desativado",
+    "selectRole": "Selecione a funcao para novos apoiadores",
+    "maxUses": "Maximo de usos (opcional)",
+    "maxUsesHint": "Deixe vazio para ilimitado"
+  }
+}

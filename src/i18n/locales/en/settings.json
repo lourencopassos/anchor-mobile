@@ -1,0 +1,12 @@
+{
+  "title": "Settings",
+  "reminders": {
+    "title": "Check-in Reminders",
+    "enable": "Enable Reminders",
+    "enableDescription": "Get notified when it's time to check in",
+    "leadTime": "Reminder Lead Time",
+    "leadTimeDescription": "Override the default reminder time for all commitments",
+    "useCommitmentDefault": "Use commitment setting",
+    "infoText": "Reminders help you stay on track with your commitments. You can set a preferred check-in time for each commitment during creation."
+  }
+}

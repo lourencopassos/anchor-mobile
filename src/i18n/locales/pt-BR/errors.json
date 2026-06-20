@@ -1,0 +1,21 @@
+{
+  "generic": "Algo deu errado. Por favor, tente novamente.",
+  "network": "Erro de rede. Verifique sua conexão.",
+  "timeout": "A requisição expirou. Tente novamente.",
+  "unauthorized": "Sua sessão expirou. Faça login novamente.",
+  "forbidden": "Você não tem permissão para fazer isso.",
+  "notFound": "O recurso solicitado não foi encontrado.",
+  "validation": "Verifique seus dados e tente novamente.",
+  "server": "Erro no servidor. Tente novamente mais tarde.",
+  "offline": "Você está offline. Esta ação requer conexão com a internet.",
+  "loginFailed": "Email ou senha inválidos. Tente novamente.",
+  "registrationFailed": "Falha no cadastro. Tente novamente.",
+  "emailRequired": "Email é obrigatório.",
+  "passwordRequired": "Senha é obrigatória.",
+  "passwordTooShort": "A senha deve ter pelo menos 8 caracteres.",
+  "passwordMismatch": "As senhas não coincidem.",
+  "firstNameRequired": "Nome é obrigatório.",
+  "lastNameRequired": "Sobrenome é obrigatório.",
+  "dateOfBirthRequired": "Data de nascimento é obrigatória.",
+  "claimFailed": "Falha ao criar sua conta. Tente novamente."
+}

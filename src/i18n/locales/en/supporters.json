@@ -1,0 +1,63 @@
+{
+  "title": "Supporters",
+  "invite": "Invite Supporter",
+  "noSupporters": "No supporters yet",
+  "inviteFirst": "Invite someone to support your journey",
+  "addSupporter": "Add Supporter",
+  "add": "Add",
+  "cancel": "Cancel",
+  "remove": "Remove",
+  "resend": "Resend",
+  "role": {
+    "observer": "Observer",
+    "observerDesc": "Can view your progress",
+    "encourager": "Encourager",
+    "encouragerDesc": "Can send you messages",
+    "verifier": "Verifier",
+    "verifierDesc": "Can verify your check-ins"
+  },
+  "state": {
+    "invited": "Invited",
+    "active": "Active",
+    "declined": "Declined",
+    "removed": "Removed"
+  },
+  "inviteModal": {
+    "title": "Invite a Supporter",
+    "emailOrPhone": "Email or Phone",
+    "selectRole": "Select Role",
+    "send": "Send Invitation",
+    "errorEmpty": "Please enter an email or phone number",
+    "errorInvalid": "Please enter a valid email or phone number",
+    "errorDuplicate": "This person has already been added"
+  },
+  "invitation": {
+    "received": "You've been invited to support someone",
+    "accept": "Accept",
+    "decline": "Decline"
+  },
+  "activity": {
+    "title": "Supporter Activity",
+    "loading": "Loading activity...",
+    "emptyTitle": "No activity yet",
+    "emptySubtitle": "Your supporters' reactions, comments, and verifications will appear here",
+    "errorTitle": "Unable to load activity",
+    "errorDefault": "Something went wrong. Please try again.",
+    "reactedTo": "reacted to your check-in",
+    "commentedOn": "commented on your check-in",
+    "verified": "verified your check-in",
+    "disputed": "disputed your check-in",
+    "filters": {
+      "all": "All",
+      "reactions": "Reactions",
+      "comments": "Comments",
+      "verifications": "Verifications"
+    },
+    "groups": {
+      "today": "Today",
+      "yesterday": "Yesterday",
+      "thisWeek": "This Week",
+      "earlier": "Earlier"
+    }
+  }
+}

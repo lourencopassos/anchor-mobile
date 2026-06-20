@@ -1,0 +1,152 @@
+{
+  "title": "Custodian",
+  "summary": {
+    "pendingDeposits": "Pending Deposits",
+    "pendingSettlements": "Pending Settlements",
+    "totalPending": "Total Pending",
+    "noPendingItems": "No pending items"
+  },
+  "tabs": {
+    "deposits": "Deposits",
+    "settlements": "Settlements"
+  },
+  "deposits": {
+    "title": "Pending Deposits",
+    "empty": "No pending deposits",
+    "emptyDescription": "You'll see deposits here when users create commitments with you as custodian.",
+    "status": {
+      "awaitingPayment": "Awaiting Payment",
+      "paymentMarked": "Payment Marked",
+      "confirmed": "Confirmed",
+      "rejected": "Rejected"
+    },
+    "detail": {
+      "title": "Deposit Details",
+      "from": "From",
+      "amount": "Amount",
+      "commitment": "Commitment",
+      "dateRange": "Date Range",
+      "createdAt": "Created",
+      "markedPaidAt": "Marked Paid",
+      "creatorNotes": "Creator Notes",
+      "creatorReference": "Reference",
+      "supporters": "Supporters",
+      "supporterCount_one": "{{count}} supporter",
+      "supporterCount_other": "{{count}} supporters",
+      "perSupporter": "each receives",
+      "noSupporters": "No supporters yet",
+      "distribution": "Distribution",
+      "charityPercent": "To Charity",
+      "supportersPercent": "To Supporters",
+      "motivation": "Motivation",
+      "timeline": "Timeline",
+      "timelineCreated": "Created",
+      "timelinePaymentMarked": "Payment Marked",
+      "timelineConfirmed": "Confirmed",
+      "loadError": "Failed to load deposit details",
+      "retry": "Retry"
+    },
+    "actions": {
+      "confirmReceived": "Confirm Received",
+      "reject": "Reject Deposit",
+      "confirmTitle": "Confirm Deposit",
+      "confirmMessage": "Have you received the {{amount}} payment from {{name}}?",
+      "confirmButton": "Yes, Received",
+      "confirmReferencePlaceholder": "e.g., PIX receipt ID",
+      "confirmReferenceLabel": "Reference (optional)",
+      "confirmNotesLabel": "Notes (optional)",
+      "confirmNotesPlaceholder": "Add any notes",
+      "rejectTitle": "Reject Deposit",
+      "rejectMessage": "Why are you rejecting this deposit?",
+      "rejectReasonLabel": "Reason (required)",
+      "rejectPlaceholder": "Enter reason for rejection",
+      "rejectButton": "Reject",
+      "cancel": "Cancel"
+    },
+    "success": {
+      "confirmed": "Deposit confirmed! The commitment is now active.",
+      "rejected": "Deposit rejected. The creator will be notified."
+    }
+  },
+  "settlements": {
+    "title": "Pending Settlements",
+    "empty": "No pending settlements",
+    "emptyDescription": "Settlement tasks will appear here when commitments fail.",
+    "status": {
+      "pending": "Pending",
+      "completed": "Completed",
+      "failed": "Failed"
+    },
+    "recipientType": {
+      "supporter": "Supporter",
+      "charity": "Charity",
+      "appPool": "Platform"
+    },
+    "detail": {
+      "title": "Settlement Details",
+      "recipient": "Recipient",
+      "amount": "Amount",
+      "payoutDetails": "Payout Details",
+      "pixKey": "PIX Key",
+      "commitmentFailed": "Commitment Failed",
+      "failureReason": "Failure Reason",
+      "failedAt": "Failed At",
+      "createdAt": "Created",
+      "attemptCount": "Attempts"
+    },
+    "actions": {
+      "markCompleted": "Mark Completed",
+      "markFailed": "Mark Failed",
+      "completeTitle": "Complete Settlement",
+      "completeMessage": "Have you sent {{amount}} to {{recipient}}?",
+      "completeButton": "Yes, Completed",
+      "externalRefPlaceholder": "Transaction ID (optional)",
+      "notesPlaceholder": "Notes (optional)",
+      "failTitle": "Mark as Failed",
+      "failMessage": "Why couldn't this settlement be completed?",
+      "failPlaceholder": "Enter reason",
+      "failButton": "Mark Failed"
+    },
+    "success": {
+      "completed": "Settlement marked as completed.",
+      "failed": "Settlement marked as failed."
+    }
+  },
+  "creatorDeposit": {
+    "title": "Deposit Required",
+    "description": "Your commitment requires a deposit to be confirmed by your custodian.",
+    "status": {
+      "awaitingPayment": "Waiting for your payment",
+      "paymentMarked": "Waiting for custodian confirmation",
+      "confirmed": "Deposit confirmed - commitment active!",
+      "rejected": "Deposit rejected"
+    },
+    "payTo": "Pay to",
+    "amount": "Amount",
+    "pixKey": "PIX Key",
+    "instructions": "Transfer the amount above to your custodian and then mark as paid.",
+    "markPaid": "I've Made the Payment",
+    "markPaidTitle": "Confirm Payment",
+    "markPaidMessage": "Have you sent {{amount}} to {{custodian}}?",
+    "markPaidButton": "Yes, I've Paid",
+    "referencePlaceholder": "Transaction ID (optional)",
+    "notesPlaceholder": "Notes for custodian (optional)",
+    "rejectedMessage": "Your custodian rejected the deposit. Reason: {{reason}}",
+    "contactCustodian": "Please contact your custodian for more information.",
+    "loadError": "Failed to load deposit status",
+    "retry": "Retry",
+    "redirecting": "Redirecting to commitment...",
+    "backToCommitment": "Back to Commitment",
+    "cancel": "Cancel"
+  },
+  "wizard": {
+    "stepCustodian": "Custodian",
+    "selectCustodian": "Select a Custodian",
+    "custodianDescription": "A custodian will hold your stake and handle payouts manually. This is optional.",
+    "searchPlaceholder": "Search by email",
+    "noCustodian": "No custodian (automatic)",
+    "selectedCustodian": "Selected Custodian",
+    "remove": "Remove",
+    "custodianInfo": "Your custodian will need to confirm receipt of your deposit before your commitment becomes active."
+  }
+}

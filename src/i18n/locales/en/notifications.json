@@ -1,0 +1,67 @@
+{
+  "title": "Notifications",
+  "markAllRead": "Mark all as read",
+  "noNotifications": "No notifications yet",
+  "unread": "{{count}} unread",
+  "unreadCount": "{{count}} unread",
+  "unreadCount_one": "{{count}} unread",
+  "unreadCount_other": "{{count}} unread",
+  "empty": "No notifications",
+  "emptyDescription": "You'll see your notifications here when you have active commitments",
+  "types": {
+    "commitment_activated": {
+      "title": "Your commitment is now active",
+      "body": "Good luck with '{{commitmentName}}'! Your {{durationDays}}-day journey begins today. Your supporters are cheering you on."
+    },
+    "commitment_restarted": {
+      "title": "A new chapter begins",
+      "body": "You've started fresh with '{{commitmentName}}'. Every restart is a choice to keep going. Your supporters have been invited to join you again."
+    },
+    "checkin_missed": {
+      "title": "A day without a check-in",
+      "body": "Yesterday passed without recording progress on '{{commitmentName}}'. Would you like to reflect on what happened?"
+    },
+    "evaluation_summary": {
+      "title": "Your week in review",
+      "body": "This week: {{completedCount}} check-ins completed out of {{totalDays}} days. Current streak: {{streakCurrent}} days."
+    },
+    "supporter_invited": {
+      "title": "You've been invited to support someone",
+      "body": "{{inviterName}} has asked you to be a supporter for their commitment '{{commitmentName}}'. Your support can make a real difference."
+    },
+    "check_in_verified": {
+      "title": "Your check-in was verified",
+      "body": "{{supporterName}} verified your check-in on '{{commitmentName}}'. Keep up the great work!"
+    },
+    "check_in_disputed": {
+      "title": "A check-in was disputed",
+      "body": "{{supporterName}} disputed your check-in on '{{commitmentName}}'. Reach out to understand their concerns."
+    },
+    "verification_pending": {
+      "title": "New check-in to verify",
+      "body": "{{ownerName}} submitted a check-in for '{{commitmentName}}'. Review it within 48 hours."
+    },
+    "reaction_received": {
+      "title": "{{supporterName}} reacted to your check-in",
+      "body": "{{supporterName}} reacted {{emoji}} to your check-in on {{checkInDate}}"
+    },
+    "comment_received": {
+      "title": "{{supporterName}} commented on your check-in",
+      "body": "{{supporterName}} left a comment on your check-in from {{checkInDate}}"
+    },
+    "peer_reaction": {
+      "title": "{{supporterName}} also reacted",
+      "body": "{{supporterName}} also reacted {{emoji}} to {{ownerName}}'s check-in"
+    },
+    "peer_comment": {
+      "title": "{{supporterName}} also commented",
+      "body": "{{supporterName}} also commented on {{ownerName}}'s check-in"
+    }
+  },
+  "push": {
+    "permissionTitle": "Enable Push Notifications",
+    "permissionMessage": "Receive reminders and updates about your commitments",
+    "registrationFailed": "Failed to register for push notifications. You can enable them later in settings.",
+    "registrationSuccess": "Push notifications enabled"
+  }
+}

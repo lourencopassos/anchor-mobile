@@ -1,0 +1,104 @@
+{
+  "title": "Supporting",
+  "filters": {
+    "all": "All",
+    "active": "Active",
+    "completed": "Completed"
+  },
+  "empty": {
+    "title": "Not Supporting Anyone Yet",
+    "subtitle": "When someone invites you to support their commitment, it will appear here."
+  },
+  "card": {
+    "daysRemaining": "{{count}} day left",
+    "daysRemaining_other": "{{count}} days left",
+    "pendingInvite": "Invitation pending",
+    "accept": "Accept",
+    "decline": "Decline"
+  },
+  "role": {
+    "observer": "Observer",
+    "encourager": "Encourager",
+    "verifier": "Verifier"
+  },
+  "detail": {
+    "title": "Commitment",
+    "supporting": "Supporting"
+  },
+  "progress": {
+    "overall": "Overall Progress",
+    "completed": "Completed",
+    "completionRate": "Completion Rate",
+    "currentStreak": "Current Streak",
+    "started": "Started",
+    "ends": "Ends"
+  },
+  "checkIn": {
+    "recentActivity": "Recent Activity",
+    "seeAll": "See all",
+    "noCheckIns": "No Check-ins Yet",
+    "noCheckInsSubtitle": "Check-ins will appear here once the commitment owner starts tracking.",
+    "status_completed": "Completed",
+    "status_skipped": "Skipped",
+    "status_missed": "Missed",
+    "detail": {
+      "title": "Check-in Details",
+      "notes": "Notes",
+      "reactions": "Reactions",
+      "comments": "Comments",
+      "noComments": "No comments yet",
+      "addComment": "Add a comment..."
+    }
+  },
+  "actions": {
+    "addComment": "Comment"
+  },
+  "verification": {
+    "title": "Pending Verifications",
+    "subtitle": "Review check-ins from people you support",
+    "empty": {
+      "title": "All Caught Up",
+      "subtitle": "You don't have any pending verifications right now."
+    },
+    "card": {
+      "checkIn": "Check-in",
+      "deadline": "Review by",
+      "timeLeft": "{{hours}}h left",
+      "urgent": "Urgent",
+      "evidence": {
+        "self_report": "Self-reported",
+        "photo": "Photo evidence",
+        "manual": "Manual entry"
+      }
+    },
+    "actions": {
+      "verify": "Verify",
+      "dispute": "Dispute",
+      "skip": "Skip",
+      "verifyDescription": "Confirm this check-in is legitimate",
+      "disputeDescription": "Report this check-in as invalid",
+      "skipDescription": "Pass without affecting the check-in"
+    },
+    "sheet": {
+      "title": "Review Check-in",
+      "verifyTitle": "Verify Check-in",
+      "verifyMessage": "Confirming will mark this check-in as completed.",
+      "disputeTitle": "Dispute Check-in",
+      "disputeMessage": "Disputing will mark this check-in as missed. Please provide a reason.",
+      "skipTitle": "Skip Verification",
+      "skipMessage": "Skipping won't affect this check-in. If no one verifies within 48 hours, it will auto-verify.",
+      "reasonPlaceholder": "Why are you disputing this check-in?",
+      "reasonRequired": "Please provide a reason for disputing"
+    },
+    "success": {
+      "verified": "Check-in verified",
+      "disputed": "Check-in disputed",
+      "skipped": "Verification skipped"
+    },
+    "error": {
+      "title": "Error",
+      "message": "Failed to submit verification. Please try again."
+    },
+    "badge": "{{count}} to review"
+  }
+}

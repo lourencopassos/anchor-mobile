@@ -1,0 +1,25 @@
+{
+  "title": "Progress",
+  "metrics": {
+    "completion": "Completion Rate",
+    "completed": "Completed",
+    "missed": "Missed",
+    "skipped": "Skipped",
+    "totalDays": "Total Days"
+  },
+  "trend": {
+    "up": "Improving",
+    "down": "Needs attention",
+    "stable": "Steady"
+  },
+  "chart": {
+    "weekly": "Weekly",
+    "monthly": "Monthly",
+    "noData": "No data yet"
+  },
+  "cycles": {
+    "title": "Cycle History",
+    "cycle": "Cycle {{number}}",
+    "ongoing": "Ongoing"
+  }
+}

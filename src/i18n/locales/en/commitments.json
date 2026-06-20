@@ -1,0 +1,285 @@
+{
+  "title": "Commitments",
+  "myCommitments": "My Commitments",
+  "tabs": {
+    "mine": "Mine",
+    "supporting": "Supporting",
+    "custodian": "Custodian"
+  },
+  "createNew": "Create New Commitment",
+  "noCommitments": "You don't have any commitments yet",
+  "startJourney": "Start your journey",
+  "filter": {
+    "all": "All",
+    "active": "Active",
+    "completed": "Completed",
+    "broken": "Broken"
+  },
+  "state": {
+    "draft": "Draft",
+    "pending_payment": "Pending Payment",
+    "active": "Active",
+    "completed": "Completed",
+    "broken": "Broken",
+    "cancelled": "Cancelled"
+  },
+  "pending": {
+    "completePayment": "Complete payment to activate",
+    "sectionTitle": "Pending Activation"
+  },
+  "templates": {
+    "quit_smoking": "Quit Smoking",
+    "exercise": "Exercise",
+    "meditation": "Meditation",
+    "diet": "Diet",
+    "sleep": "Sleep",
+    "custom": "Custom"
+  },
+  "wizard": {
+    "step1": "Choose Template",
+    "step2": "Set Dates",
+    "stepFrequency": "Check-in Frequency",
+    "stepSchedule": "Schedule & Reminders",
+    "stepMotivation": "Your Motivation",
+    "stepStake": "Set Stake",
+    "stepDistribution": "Distribution",
+    "step5Supporters": "Add Supporters",
+    "step6Verification": "Verification Settings",
+    "stepReview": "Review",
+    "verificationHelper": "Choose who can vote to mark your commitment as failed",
+    "verificationAuthority": "Verification",
+    "next": "Next",
+    "back": "Back",
+    "startDate": "Start Date",
+    "endDate": "End Date",
+    "selectStartDate": "Select start date",
+    "selectEndDate": "Select end date",
+    "startDateHelper": "Can start today or later",
+    "endDateHelper": "Must be after start date",
+    "endDateError": "End date must be after start date",
+    "stakeAmount": "Stake Amount",
+    "stakeRange": "$5 - $1,000",
+    "charityPercent": "Charity %",
+    "supportersPercent": "Supporters %",
+    "supportersCount": "Supporters",
+    "supportersHelper": "Invite people to hold you accountable (optional)",
+    "supportersInfo": "Supporters can verify your check-ins and vote on your commitment outcome. You can always add more supporters later.",
+    "reviewTitle": "Review Your Commitment",
+    "createCommitment": "Create Commitment",
+    "createError": "Failed to create commitment. Please try again.",
+    "cpf": "CPF (Brazilian ID)",
+    "cpfPlaceholder": "000.000.000-00",
+    "cpfRequired": "Required for Brazilian payments",
+    "cpfInvalid": "Please enter a valid 11-digit CPF",
+    "country": "Your Country",
+    "countryHelper": "Determines available payment methods",
+    "paymentErrorTitle": "Payment Issue",
+    "paymentErrorMessage": "Your commitment was created, but we couldn't process the payment. Don't worry - you can complete the payment later.",
+    "paymentErrorRetry": "Go to your commitments list to retry the payment when you're ready.",
+    "goToCommitments": "Go to Commitments",
+    "stakeLockInfoTitle": "Important",
+    "stakeLockInfo": "Your stake will be locked once this commitment is created. If you fail, the stake will be distributed to charity and supporters based on your settings.",
+    "quickSelect": "Quick Select",
+    "frequency": "Frequency",
+    "preferredTime": "Preferred Time",
+    "motivation": "Motivation",
+    "template": "Template"
+  },
+  "frequency": {
+    "title": "How often will you check in?",
+    "subtitle": "Choose your check-in frequency. You can make up missed days within each period.",
+    "selectAtLeastOne": "Please select at least one day",
+    "lockedWarning": "Frequency cannot be changed after activation",
+    "daily": {
+      "title": "Every Day",
+      "description": "Check in once daily"
+    },
+    "times_per_week": {
+      "title": "Times per Week",
+      "description": "Check in multiple times each week"
+    },
+    "times_per_month": {
+      "title": "Times per Month",
+      "description": "Check in multiple times each month"
+    },
+    "specific_days": {
+      "title": "Specific Days",
+      "description": "Check in on selected days"
+    },
+    "targetCount": "Target check-ins",
+    "selectDays": "Select days",
+    "makeUpInfo": {
+      "title": "Make-up Check-ins",
+      "description": "You can check in on any day to make up for missed days within the same period."
+    },
+    "days": {
+      "mon": "Mon",
+      "tue": "Tue",
+      "wed": "Wed",
+      "thu": "Thu",
+      "fri": "Fri",
+      "sat": "Sat",
+      "sun": "Sun"
+    },
+    "formatted": {
+      "daily": "Every day",
+      "timesPerWeek": "{{count}}x per week",
+      "timesPerMonth": "{{count}}x per month",
+      "noDaysSelected": "No days selected",
+      "unknown": "Unknown"
+    }
+  },
+  "schedule": {
+    "title": "Set Your Schedule",
+    "subtitle": "Configure reminders to help you stay on track",
+    "setPreferredTime": "Set preferred check-in time",
+    "setPreferredTimeDesc": "Get reminded at your chosen time",
+    "preferredTimeLabel": "Check-in time",
+    "noPreference": "No preference",
+    "reminderBefore": "Remind me before",
+    "reminderBeforeDesc": "Get a heads up before your check-in time",
+    "reminderAtTime": "Remind at exact time",
+    "reminderAtTimeDesc": "Get notified right when it's time",
+    "minutesBefore": "{{count}} minutes before",
+    "noReminders": "No time preference set. You can check in anytime.",
+    "softEnforcement": {
+      "title": "Soft Reminders",
+      "description": "Reminders are optional and won't affect your commitment. You can check in at any time."
+    }
+  },
+  "motivation": {
+    "title": "Why does this matter to you?",
+    "subtitle": "Write a personal note to remind yourself why you're making this commitment (optional)",
+    "quickPrompts": "Tap to add",
+    "placeholder": "This commitment matters to me because...",
+    "characterCount": "{{current}}/{{max}}",
+    "optional": "Optional, but recommended",
+    "benefits": {
+      "title": "Why This Helps",
+      "description": "Having a personal reason written down increases your chances of success. It reminds you of your motivation when things get tough."
+    },
+    "privacyNote": "Your motivation is private and only visible to you"
+  },
+  "detail": {
+    "progress": "Progress",
+    "supporters": "Supporters",
+    "activity": "Activity",
+    "history": "History",
+    "checkIn": "Check In",
+    "currentCycle": "Current Cycle",
+    "daysRemaining": "{{count}} days remaining",
+    "daysRemaining_one": "{{count}} day remaining",
+    "restart": "Restart Commitment",
+    "cannotRestart": "Cannot restart this commitment",
+    "timeline": {
+      "created": "Created",
+      "started": "Started",
+      "starts": "Starts",
+      "ends": "Ends",
+      "now": "Now"
+    },
+    "future": {
+      "startsIn": "Starts in {{count}} days",
+      "startsIn_one": "Starts in {{count}} day",
+      "startsToday": "Starts today!",
+      "startsTomorrow": "Starts tomorrow",
+      "getReady": "Get ready! Your commitment begins soon.",
+      "journey": "{{count}} day journey",
+      "journey_one": "{{count}} day journey"
+    },
+    "metadata": {
+      "title": "Details",
+      "duration": "Duration",
+      "durationDays": "{{count}} days",
+      "durationDays_one": "{{count}} day",
+      "verification": "Verification",
+      "createdOn": "Created",
+      "timezone": "Timezone",
+      "startDate": "Start Date",
+      "endDate": "End Date"
+    },
+    "preparation": {
+      "title": "Preparation",
+      "stakeDeposited": "Stake deposited",
+      "inviteSupporters": "Invite supporters",
+      "setupReminders": "Set up reminders"
+    }
+  },
+  "state": {
+    "scheduled": "Scheduled"
+  },
+  "restart": {
+    "title": "Restart Commitment",
+    "selectMode": "Select Recovery Mode",
+    "fullReset": "Full Reset",
+    "fullResetDesc": "Start completely fresh with new dates and stake",
+    "sameRules": "Same Rules",
+    "sameRulesDesc": "Keep the same stake and rules, just new dates",
+    "adjusted": "Adjusted Retry",
+    "adjustedDesc": "Modify frequency or stake for this attempt",
+    "confirm": "Restart Commitment",
+    "error": "Failed to restart commitment. Please try again.",
+    "adjustFrequency": "Adjust Frequency",
+    "frequencyRecommendationTitle": "Consider an easier frequency",
+    "frequencyRecommendationDesc": "Your previous attempt was {{previous}}. We recommend trying {{recommended}} this time.",
+    "useRecommendation": "Use recommended frequency",
+    "newFrequency": "New frequency"
+  },
+  "payout": {
+    "title": "Stake Distribution",
+    "charity": "Charity",
+    "supporters": "Supporters",
+    "total": "Total Distributed",
+    "complete": "All payouts completed",
+    "processing": "Payouts in progress...",
+    "pending": "Pending",
+    "completed": "Completed",
+    "failed": "Failed"
+  },
+  "payment": {
+    "pixTitle": "Pay with PIX",
+    "pixExpires": "Expires in {{minutes}} minutes",
+    "pixCopyPaste": "PIX Copy & Paste Code",
+    "pixInstructions": "Scan the QR code or copy the code to pay in your bank app",
+    "pixDismiss": "I'll pay later"
+  },
+  "reportFailure": {
+    "button": "I Failed",
+    "title": "Report Failure",
+    "message": "Are you sure you want to report that you failed this commitment? This action cannot be undone and your stake will be forfeited.",
+    "reasonLabel": "What happened? (optional)",
+    "reasonPlaceholder": "Tell us what happened...",
+    "confirm": "Yes, I Failed",
+    "cancel": "Cancel",
+    "success": "Commitment marked as failed"
+  },
+  "verification": {
+    "selected": "Selected",
+    "requiresSupporters": "Requires at least one supporter",
+    "noSupporters": "No supporters added yet",
+    "oneSupporter": "1 supporter added",
+    "multipleSupporters": "{{count}} supporters added",
+    "infoTitle": "How verification works",
+    "infoText": "You can always report your own failure. This setting controls whether your supporters can also vote to mark your commitment as failed.",
+    "self_only": {
+      "title": "Self Report Only",
+      "short": "Self Only",
+      "description": "Only you can report if you failed. Supporters can encourage but cannot vote."
+    },
+    "single_supporter": {
+      "title": "Any Supporter",
+      "short": "Any Supporter",
+      "description": "Any single supporter can vote to mark your commitment as failed."
+    },
+    "majority": {
+      "title": "Majority Vote",
+      "short": "Majority",
+      "description": "More than half of your supporters must vote to mark it as failed."
+    },
+    "unanimous": {
+      "title": "Unanimous Vote",
+      "short": "Unanimous",
+      "description": "All supporters must agree to mark your commitment as failed."
+    }
+  }
+}

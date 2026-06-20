@@ -1,0 +1,83 @@
+{
+  "todaysFocusLabel": "FOCO DE HOJE",
+  "good_morning": "Bom dia",
+  "good_afternoon": "Boa tarde",
+  "good_evening": "Boa noite",
+  "todaysFocus": "Foco de Hoje",
+  "checkedIn": "Check-in feito",
+  "keepStreak": "Mantenha sua sequência de {{count}} dias!",
+  "greatJob": "Ótimo trabalho! Volte amanhã",
+  "stats": {
+    "activeCommitments": "Ativos",
+    "completedCommitments": "Completados",
+    "currentStreak": "Sequência",
+    "successRate": "Sucesso"
+  },
+  "sections": {
+    "activeCommitments": "Compromissos Ativos",
+    "recentActivity": "Atividade Recente"
+  },
+  "empty": {
+    "title": "Comece Sua Jornada",
+    "subtitle": "Crie seu primeiro compromisso para começar a acompanhar seu progresso e construir melhores hábitos.",
+    "createFirst": "Criar Primeiro Compromisso"
+  },
+  "features": {
+    "stake": {
+      "title": "Aposte no Seu Compromisso",
+      "description": "Coloque dinheiro por trás das suas metas"
+    },
+    "partners": {
+      "title": "Parceiros de Responsabilidade",
+      "description": "Receba apoio dos amigos"
+    },
+    "progress": {
+      "title": "Acompanhe o Progresso",
+      "description": "Check-ins diários e sequências"
+    }
+  },
+  "actions": {
+    "seeAll": "Ver todos",
+    "createAnother": "Criar outro compromisso"
+  },
+  "community": {
+    "title": "Sua Rede de Apoio",
+    "supporting": "Apoiando",
+    "recentActivity": "Atividade Recente",
+    "noActivity": "Nenhuma atividade recente",
+    "noActivitySubtitle": "Atividades da sua rede aparecerão aqui",
+    "viewAll": "Ver toda atividade",
+    "peopleCount": "{{count}} pessoa",
+    "peopleCount_other": "{{count}} pessoas",
+    "emptyTitle": "Construa Sua Rede",
+    "emptySubtitle": "Aceite convites ou peça links de compromissos aos amigos"
+  },
+  "invites": {
+    "title": "Você Foi Convidado",
+    "subtitle": "{{name}} quer seu apoio",
+    "accept": "Aceitar",
+    "decline": "Recusar",
+    "declineConfirm": "Recusar este convite?",
+    "declineMessage": "Você pode ser convidado novamente depois."
+  },
+  "returnUser": {
+    "title": "Bem-vindo de Volta!",
+    "subtitle": "Você completou {{count}} compromisso. Pronto para outro?",
+    "subtitle_other": "Você completou {{count}} compromissos. Pronto para outro?",
+    "successRate": "{{rate}}% taxa de sucesso",
+    "createNew": "Iniciar Novo Compromisso",
+    "viewHistory": "Ver Compromissos Anteriores"
+  },
+  "activity": {
+    "checkin": "Fez check-in",
+    "checkinCompleted": "fez check-in",
+    "checkinMissed": "perdeu o check-in",
+    "streakMilestone": "sequência de {{count}} dia!",
+    "streakMilestone_other": "sequência de {{count}} dias!",
+    "supporterJoined": "entrou como apoiador",
+    "milestone": "Marco alcançado",
+    "verification": "Verificou check-in",
+    "message": "enviou uma mensagem",
+    "completed": "completou seu compromisso!"
+  }
+}

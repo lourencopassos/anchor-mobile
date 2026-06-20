@@ -1,0 +1,31 @@
+{
+  "title": "Claim Your Account",
+  "validating": "Validating invitation...",
+  "invalidToken": "This invitation link is invalid or has been revoked.",
+  "expiredToken": "This invitation has expired. Please ask for a new invitation.",
+  "alreadyClaimed": "This account has already been claimed. Please log in instead.",
+  "errorTitle": "Invalid Invitation",
+  "welcomeTitle": "{{name}} invited you",
+  "welcomeSubtitle": "Complete your account to become a supporter",
+  "displayName": "Your Name",
+  "displayNamePlaceholder": "How should we call you?",
+  "displayNameRequired": "Please enter your name",
+  "createAccount": "Create Account",
+  "successTitle": "Account Created!",
+  "successSubtitle": "You can now respond to the invitation",
+  "wantsYouToSupport": "wants you to support their commitment",
+  "commitment": "Commitment",
+  "yourRole": "Your Role",
+  "accept": "Accept Invitation",
+  "decline": "Decline",
+  "roles": {
+    "observer": "Observer",
+    "encourager": "Encourager",
+    "verifier": "Verifier"
+  },
+  "roleDescriptions": {
+    "observer": "You'll be able to see their progress and cheer them on.",
+    "encourager": "You can send messages of support to help them stay motivated.",
+    "verifier": "You'll help verify their daily check-ins and hold them accountable."
+  }
+}

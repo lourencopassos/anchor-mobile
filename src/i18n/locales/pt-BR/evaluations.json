@@ -1,0 +1,25 @@
+{
+  "title": "Progresso",
+  "metrics": {
+    "completion": "Taxa de Conclusão",
+    "completed": "Concluídos",
+    "missed": "Perdidos",
+    "skipped": "Pulados",
+    "totalDays": "Total de Dias"
+  },
+  "trend": {
+    "up": "Melhorando",
+    "down": "Precisa atenção",
+    "stable": "Estável"
+  },
+  "chart": {
+    "weekly": "Semanal",
+    "monthly": "Mensal",
+    "noData": "Sem dados ainda"
+  },
+  "cycles": {
+    "title": "Histórico de Ciclos",
+    "cycle": "Ciclo {{number}}",
+    "ongoing": "Em andamento"
+  }
+}

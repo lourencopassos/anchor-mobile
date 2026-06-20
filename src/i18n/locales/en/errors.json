@@ -1,0 +1,21 @@
+{
+  "generic": "Something went wrong. Please try again.",
+  "network": "Network error. Please check your connection.",
+  "timeout": "Request timed out. Please try again.",
+  "unauthorized": "Your session has expired. Please log in again.",
+  "forbidden": "You don't have permission to do this.",
+  "notFound": "The requested resource was not found.",
+  "validation": "Please check your input and try again.",
+  "server": "Server error. Please try again later.",
+  "offline": "You're offline. This action requires an internet connection.",
+  "loginFailed": "Invalid email or password. Please try again.",
+  "registrationFailed": "Registration failed. Please try again.",
+  "emailRequired": "Email is required.",
+  "passwordRequired": "Password is required.",
+  "passwordTooShort": "Password must be at least 8 characters.",
+  "passwordMismatch": "Passwords do not match.",
+  "firstNameRequired": "First name is required.",
+  "lastNameRequired": "Last name is required.",
+  "dateOfBirthRequired": "Date of birth is required.",
+  "claimFailed": "Failed to create your account. Please try again."
+}
