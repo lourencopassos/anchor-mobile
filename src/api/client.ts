@@ -27,9 +27,15 @@ export const apiClient = axios.create({
   },
 });
 
-// Generate correlation ID for tracing
+// Generate correlation ID for tracing.
+// Must be a UUID: the backend persists it into UUID columns (ledger, audit),
+// so a non-UUID value is rejected and breaks writes (e.g. commitment creation).
 function generateCorrelationId(): string {
-  return `${Date.now()}-${Math.random().toString(36).substring(2, 9)}`;
+  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, (c) => {
+    const r = (Math.random() * 16) | 0;
+    const v = c === 'x' ? r : (r & 0x3) | 0x8;
+    return v.toString(16);
+  });
 }
 
 // Request interceptor - add auth token and correlation ID
