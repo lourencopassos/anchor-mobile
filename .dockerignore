@@ -1,0 +1,13 @@
+node_modules
+dist
+.expo
+.git
+.gitignore
+ios
+android
+.env
+.env.*
+*.log
+.DS_Store
+.claude
+docs
