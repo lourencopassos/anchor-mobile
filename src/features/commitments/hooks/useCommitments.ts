@@ -21,6 +21,9 @@ export function filterCommitments(
 ): Commitment[] {
   if (!commitments) return [];
 
+  // CANCELLED commitments are removed artifacts — never show them in any list.
+  commitments = commitments.filter((c) => c.state !== 'CANCELLED');
+
   switch (filter) {
     case 'active':
       // All ACTIVE state commitments (regardless of cycle status)
