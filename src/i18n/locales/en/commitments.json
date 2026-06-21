@@ -206,7 +206,18 @@
     }
   },
   "state": {
-    "scheduled": "Scheduled"
+    "scheduled": "Scheduled",
+    "pending_payment": "Pending deposit"
+  },
+  "cancelDraft": {
+    "explainer": "This commitment wasn't completed and can't be activated.",
+    "button": "Remove commitment",
+    "confirmTitle": "Remove commitment?",
+    "confirmMessage": "This will permanently remove this incomplete commitment. This can't be undone.",
+    "dismiss": "Keep",
+    "confirm": "Remove",
+    "errorTitle": "Couldn't remove",
+    "errorMessage": "Something went wrong removing this commitment. Please try again."
   },
   "restart": {
     "title": "Restart Commitment",

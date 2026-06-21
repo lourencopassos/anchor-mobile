@@ -74,13 +74,6 @@ export function CustodianStep({
     onSetCustodianEmail(null);
   }, [onSetCustodianEmail]);
 
-  const handleSelectNoCustodian = useCallback(() => {
-    haptics.light();
-    onSetCustodianEmail(null);
-    setInputEmail('');
-    setInputError(null);
-  }, [onSetCustodianEmail]);
-
   return (
     <View style={styles.container}>
       {/* Header */}
@@ -166,12 +159,6 @@ export function CustodianStep({
         </Animated.View>
       )}
 
-      {/* No Custodian Option */}
-      <NoCustodianOption
-        selected={custodianEmail === null}
-        onSelect={handleSelectNoCustodian}
-      />
-
       {/* Info Box */}
       <View style={styles.infoBox}>
         <View style={styles.infoIconContainer}>
@@ -210,73 +197,6 @@ function AddButton({ onPress, disabled }: { onPress: () => void; disabled: boole
       <Text style={[styles.addButtonText, disabled && styles.addButtonTextDisabled]}>
         Add
       </Text>
-    </AnimatedPressable>
-  );
-}
-
-// No Custodian Option Component
-function NoCustodianOption({
-  selected,
-  onSelect,
-}: {
-  selected: boolean;
-  onSelect: () => void;
-}) {
-  const { t } = useTranslation('custodian');
-  const scale = useSharedValue(1);
-
-  const animatedStyle = useAnimatedStyle(() => ({
-    transform: [{ scale: scale.value }],
-  }));
-
-  return (
-    <AnimatedPressable
-      onPressIn={() => {
-        scale.value = withSpring(0.98, { damping: 15 });
-      }}
-      onPressOut={() => {
-        scale.value = withSpring(1, { damping: 12 });
-      }}
-      onPress={onSelect}
-      style={[
-        styles.optionCard,
-        selected && styles.optionCardSelected,
-        animatedStyle,
-      ]}
-    >
-      <View style={styles.optionContent}>
-        {/* Icon */}
-        <View style={[
-          styles.optionIcon,
-          selected && styles.optionIconSelected,
-        ]}>
-          <Text style={styles.optionEmoji}>⚡</Text>
-        </View>
-
-        {/* Text */}
-        <View style={styles.optionText}>
-          <Text style={[
-            styles.optionTitle,
-            selected && styles.optionTitleSelected,
-          ]}>
-            {t('wizard.noCustodian')}
-          </Text>
-          <Text style={[
-            styles.optionDescription,
-            selected && styles.optionDescriptionSelected,
-          ]}>
-            Automatic payment processing
-          </Text>
-        </View>
-
-        {/* Radio */}
-        <View style={[
-          styles.radio,
-          selected && styles.radioSelected,
-        ]}>
-          {selected && <View style={styles.radioInner} />}
-        </View>
-      </View>
     </AnimatedPressable>
   );
 }

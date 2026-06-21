@@ -206,7 +206,18 @@
     }
   },
   "state": {
-    "scheduled": "Agendado"
+    "scheduled": "Agendado",
+    "pending_payment": "Aguardando depósito"
+  },
+  "cancelDraft": {
+    "explainer": "Este compromisso não foi concluído e não pode ser ativado.",
+    "button": "Remover compromisso",
+    "confirmTitle": "Remover compromisso?",
+    "confirmMessage": "Isso removerá permanentemente este compromisso incompleto. Não pode ser desfeito.",
+    "dismiss": "Manter",
+    "confirm": "Remover",
+    "errorTitle": "Não foi possível remover",
+    "errorMessage": "Algo deu errado ao remover este compromisso. Tente novamente."
   },
   "restart": {
     "title": "Reiniciar Compromisso",

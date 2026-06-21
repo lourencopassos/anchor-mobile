@@ -1,7 +1,8 @@
 import { useState, useMemo, useEffect } from 'react';
-import { View, Text, ScrollView, Pressable } from 'react-native';
+import { View, Text, ScrollView, Pressable, Alert } from 'react-native';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { useTranslation } from 'react-i18next';
+import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { parseISO, isAfter, startOfDay } from 'date-fns';
 import { SafeScreen } from '@/shared/components/layout/SafeScreen';
 import { Header } from '@/shared/components/layout/Header';
@@ -17,6 +18,8 @@ import { PayoutStatus } from '@/features/commitments/components/PayoutStatus';
 import { RestartModal } from '@/features/commitments/components/RestartModal';
 import { ReportFailureModal } from '@/features/commitments/components/ReportFailureModal';
 import { useCommitment, useRestartEligibility } from '@/features/commitments/hooks/useCommitment';
+import { COMMITMENTS_QUERY_KEY } from '@/features/commitments/hooks/useCommitments';
+import * as commitmentsApi from '@api/endpoints/commitments.api';
 import { formatCurrency } from '@/shared/utils/format.utils';
 
 import type { TemplateType, VerificationAuthorityType } from '@api/types';
@@ -57,7 +60,34 @@ export default function CommitmentDetailScreen() {
   const [showRestartModal, setShowRestartModal] = useState(false);
   const [showReportFailureModal, setShowReportFailureModal] = useState(false);
 
+  const queryClient = useQueryClient();
   const { data: commitment, isLoading, error, refetch } = useCommitment(id);
+
+  const cancelMutation = useMutation({
+    mutationFn: () => commitmentsApi.cancel(id),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: COMMITMENTS_QUERY_KEY });
+      router.replace('/(main)/commitments');
+    },
+    onError: () => {
+      Alert.alert(t('cancelDraft.errorTitle'), t('cancelDraft.errorMessage'));
+    },
+  });
+
+  const handleCancelDraft = () => {
+    Alert.alert(
+      t('cancelDraft.confirmTitle'),
+      t('cancelDraft.confirmMessage'),
+      [
+        { text: t('cancelDraft.dismiss'), style: 'cancel' },
+        {
+          text: t('cancelDraft.confirm'),
+          style: 'destructive',
+          onPress: () => cancelMutation.mutate(),
+        },
+      ],
+    );
+  };
   const { data: restartEligibility } = useRestartEligibility(
     commitment?.state === 'BROKEN' ? id : undefined
   );
@@ -404,6 +434,22 @@ export default function CommitmentDetailScreen() {
               onPress={handleReportFailure}
               variant="outline"
               fullWidth
+            />
+          </View>
+        )}
+
+        {/* Draft (incomplete creation) — only DRAFTs can be removed */}
+        {commitment.state === 'DRAFT' && (
+          <View className="gap-2 mb-6">
+            <Text className="text-sm text-neutral-500 text-center">
+              {t('cancelDraft.explainer')}
+            </Text>
+            <Button
+              title={t('cancelDraft.button')}
+              onPress={handleCancelDraft}
+              variant="outline"
+              fullWidth
+              disabled={cancelMutation.isPending}
             />
           </View>
         )}

@@ -86,7 +86,7 @@ export function PendingCommitmentCard({ commitment }: PendingCommitmentCardProps
             {t(TEMPLATE_LABELS[commitment.templateType])}
           </Text>
           <Text className="text-sm text-neutral-500 dark:text-neutral-400">
-            {formatCurrency(commitment.stakeAmountCents ?? 0)} {t('common.staked')}
+            {formatCurrency(commitment.stakeAmountCents ?? 0)} {t('staked', { ns: 'common' })}
           </Text>
         </View>
         <View style={styles.badge}>

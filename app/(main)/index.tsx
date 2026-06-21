@@ -400,7 +400,7 @@ export default function HomeScreen() {
               </Animated.View>
             )}
 
-            {activeCommitments.length > 0 && activeCommitments.length < 3 && (
+            {activeCommitments.length < 3 && (
               <Animated.View entering={FadeInDown.delay(600)}>
                 <AddCommitmentButton onPress={handleCreateCommitment} />
               </Animated.View>

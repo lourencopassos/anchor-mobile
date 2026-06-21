@@ -29,8 +29,11 @@ export function filterCommitments(
       // Only ACTIVE commitments that have an active cycle (can receive check-ins)
       return commitments.filter((c) => c.state === 'ACTIVE' && c.currentCycle);
     case 'pending':
-      // Commitments waiting for payment/activation (DRAFT without activatedAt)
-      return commitments.filter((c) => c.state === 'DRAFT' && !c.activatedAt);
+      // "Pending Activation" = successfully created commitments awaiting the
+      // custodian's deposit confirmation. Only PENDING_DEPOSIT qualifies.
+      // A DRAFT is a failed/incomplete creation artifact, NOT awaiting payment,
+      // so it must not appear here (it can only be removed — see 'draft').
+      return commitments.filter((c) => c.state === 'PENDING_DEPOSIT');
     case 'draft':
       return commitments.filter((c) => c.state === 'DRAFT');
     case 'completed':

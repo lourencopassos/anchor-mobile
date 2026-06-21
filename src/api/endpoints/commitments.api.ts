@@ -109,6 +109,21 @@ export async function reportFailure(
 }
 
 /**
+ * Cancel (remove) a DRAFT commitment.
+ * Only valid for failed/incomplete DRAFT commitments — successfully created
+ * commitments cannot be cancelled.
+ */
+export async function cancel(
+  id: string
+): Promise<{ id: string; state: string; message: string }> {
+  const response = await apiClient.post<{ id: string; state: string; message: string }>(
+    `/commitments/${id}/cancel`,
+    {}
+  );
+  return response.data;
+}
+
+/**
  * Get supporter activity for a commitment (owner only)
  * Returns reactions, comments, and votes from supporters.
  */
