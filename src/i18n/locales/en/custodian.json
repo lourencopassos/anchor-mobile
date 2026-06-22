@@ -147,6 +147,7 @@
     "noCustodian": "No custodian (automatic)",
     "selectedCustodian": "Selected Custodian",
     "remove": "Remove",
-    "custodianInfo": "Your custodian will need to confirm receipt of your deposit before your commitment becomes active."
+    "custodianInfo": "Your custodian will need to confirm receipt of your deposit before your commitment becomes active.",
+    "skipHint": "No money-holder yet? You can skip this and assign or invite one later from the commitment page."
   }
 }

@@ -5,6 +5,14 @@
 import { SupporterRole } from './supporter.types';
 
 /**
+ * What a shareable invitation link onboards the claimer as.
+ */
+export enum InvitationLinkType {
+  SUPPORTER = 'SUPPORTER',
+  CUSTODIAN = 'CUSTODIAN',
+}
+
+/**
  * Source of a supporter invitation for attribution tracking.
  */
 export enum InvitationSource {
@@ -27,6 +35,8 @@ export enum InvitationSource {
 export interface GenerateInvitationLinkRequest {
   role: SupporterRole;
   maxUses?: number | null;
+  /** Defaults to SUPPORTER. CUSTODIAN onboards the money-holder. */
+  linkType?: InvitationLinkType;
 }
 
 /**
@@ -52,6 +62,7 @@ export interface InvitationLink {
   code: string;
   url: string;
   role: SupporterRole;
+  linkType: InvitationLinkType;
   maxUses: number | null;
   currentUses: number;
   expiresAt: string;
@@ -68,6 +79,7 @@ export interface InvitationLinkContext {
   inviterName: string;
   inviterAvatarUrl?: string;
   role: SupporterRole;
+  linkType: InvitationLinkType;
   supporterMessage?: string;
   stakeAmountCents: number;
   stakeCurrency: string;
@@ -83,9 +95,12 @@ export interface InvitationLinkContext {
  * Response after claiming an invitation link.
  */
 export interface ClaimInvitationLinkResponse {
-  supporterId: string;
+  linkType: InvitationLinkType;
   commitmentId: string;
-  role: SupporterRole;
+  /** Supporter claims only */
+  supporterId?: string;
+  /** Supporter claims only */
+  role?: SupporterRole;
   message: string;
 }
 

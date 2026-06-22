@@ -12,6 +12,7 @@ import { LoadingSpinner } from '@/shared/components/ui/LoadingSpinner';
 import { Avatar } from '@/shared/components/ui/Avatar';
 import { Badge } from '@/shared/components/ui/Badge';
 import { useValidateInvitation, useClaimAccount, useRespondToInvitation } from '@/features/auth/hooks';
+import { supporterRoleKey } from '@/i18n/keyHelpers';
 
 type ClaimStep = 'loading' | 'form' | 'invitation' | 'error';
 
@@ -223,7 +224,7 @@ export default function ClaimScreen() {
           {/* Invitation card */}
           <Card variant="elevated" className="mb-8">
             <View className="items-center mb-4">
-              <Avatar name={invitation.inviterName} size="large" />
+              <Avatar name={invitation.inviterName} size="lg" />
               <Text className="text-lg font-semibold mt-3">
                 {invitation.inviterName}
               </Text>
@@ -243,7 +244,7 @@ export default function ClaimScreen() {
               <View className="flex-row items-center justify-between">
                 <Text className="text-neutral-500">{t('yourRole')}</Text>
                 <Badge
-                  label={t(`roles.${invitation.supporterRole.toLowerCase()}`)}
+                  label={t(`roles.${supporterRoleKey(invitation.supporterRole)}`)}
                   variant={getRoleBadgeVariant(invitation.supporterRole)}
                 />
               </View>
@@ -251,7 +252,7 @@ export default function ClaimScreen() {
 
             <View className="bg-neutral-50 rounded-lg p-3 mt-4">
               <Text className="text-sm text-neutral-600 text-center">
-                {t(`roleDescriptions.${invitation.supporterRole.toLowerCase()}`)}
+                {t(`roleDescriptions.${supporterRoleKey(invitation.supporterRole)}`)}
               </Text>
             </View>
           </Card>
@@ -304,7 +305,7 @@ export default function ClaimScreen() {
         {/* Welcome message */}
         {invitation && (
           <View className="items-center mb-6">
-            <Avatar name={invitation.inviterName} size="large" />
+            <Avatar name={invitation.inviterName} size="lg" />
             <Text className="text-lg font-semibold mt-3 text-center">
               {t('welcomeTitle', { name: invitation.inviterName })}
             </Text>

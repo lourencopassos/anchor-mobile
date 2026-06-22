@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { View, Text } from 'react-native';
-import { Link } from 'expo-router';
+import { Link, useLocalSearchParams } from 'expo-router';
 import { useTranslation } from 'react-i18next';
 import { SafeScreen } from '@/shared/components/layout/SafeScreen';
 import { Button } from '@/shared/components/ui/Button';
@@ -12,10 +12,13 @@ export default function LoginScreen() {
   const { t: tCommon } = useTranslation('common');
   const { t: tErrors } = useTranslation('errors');
 
+  // When arriving from an invite, `returnTo` carries the path to resume after auth.
+  const { returnTo } = useLocalSearchParams<{ returnTo?: string }>();
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const { login, isPending, isError, error, reset } = useLogin();
+  const { login, isPending, isError, error, reset } = useLogin(returnTo);
 
   const handleLogin = () => {
     if (!email.trim() || !password.trim()) {
@@ -74,7 +77,10 @@ export default function LoginScreen() {
 
         <View className="flex-row justify-center mt-4">
           <Text className="text-neutral-600">{t('noAccount')} </Text>
-          <Link href="/(auth)/register" asChild>
+          <Link
+            href={{ pathname: '/(auth)/register', params: returnTo ? { returnTo } : {} }}
+            asChild
+          >
             <Text className="text-primary-500 font-semibold">
               {t('register')}
             </Text>

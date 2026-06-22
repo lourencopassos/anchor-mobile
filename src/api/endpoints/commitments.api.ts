@@ -124,6 +124,21 @@ export async function cancel(
 }
 
 /**
+ * Assign a custodian (money-holder) to a PENDING_CUSTODIAN commitment.
+ * Moves it to PENDING_DEPOSIT and creates the manual deposit.
+ */
+export async function assignCustodian(
+  id: string,
+  custodianEmail: string
+): Promise<{ id: string; state: string; message: string }> {
+  const response = await apiClient.post<{ id: string; state: string; message: string }>(
+    `/commitments/${id}/assign-custodian`,
+    { custodianEmail }
+  );
+  return response.data;
+}
+
+/**
  * Get supporter activity for a commitment (owner only)
  * Returns reactions, comments, and votes from supporters.
  */

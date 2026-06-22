@@ -12,6 +12,8 @@ import { Avatar } from '@/shared/components/ui/Avatar';
 import { Badge } from '@/shared/components/ui/Badge';
 import { useAuthStore } from '@/features/auth/stores/auth.store';
 import * as invitationLinksApi from '@/api/endpoints/invitation-links.api';
+import { supporterRoleKey } from '@/i18n/keyHelpers';
+import { InvitationLinkType } from '@/api/types';
 import type { InvitationLinkContext, ClaimInvitationLinkResponse } from '@/api/types';
 
 type JoinStep = 'loading' | 'preview' | 'success' | 'error';
@@ -69,6 +71,8 @@ export default function JoinScreen() {
     retry: false,
   });
 
+  const isCustodian = context?.linkType === InvitationLinkType.CUSTODIAN;
+
   // Claim mutation
   const claimMutation = useMutation<ClaimInvitationLinkResponse, Error>({
     mutationFn: () =>
@@ -81,8 +85,9 @@ export default function JoinScreen() {
       }),
     onSuccess: () => {
       setStep('success');
-      // Invalidate supported commitments to refresh the list
+      // Refresh both the supporter and custodian views so the new relationship shows.
       queryClient.invalidateQueries({ queryKey: ['supported-commitments'] });
+      queryClient.invalidateQueries({ queryKey: ['custodian'] });
     },
     onError: (err: any) => {
       const status = err?.response?.status;
@@ -154,7 +159,7 @@ export default function JoinScreen() {
   };
 
   const handleGoToCommitments = () => {
-    router.replace('/(main)/supporting');
+    router.replace(isCustodian ? '/(main)/custodian' : '/(main)/supporting');
   };
 
   // Format currency
@@ -220,23 +225,29 @@ export default function JoinScreen() {
               <Text className="text-4xl">🎉</Text>
             </View>
             <Text className="text-2xl font-bold text-neutral-800">
-              {t('success.title')}
+              {isCustodian ? t('custodian.successTitle') : t('success.title')}
             </Text>
             <Text className="text-neutral-600 text-center mt-2">
-              {t('success.subtitle', { name: context?.inviterName })}
+              {isCustodian
+                ? t('custodian.successSubtitle', { name: context?.inviterName })
+                : t('success.subtitle', { name: context?.inviterName })}
             </Text>
           </View>
 
           {/* Commitment summary */}
           <Card variant="elevated" className="mb-8">
             <View className="flex-row items-center mb-4">
-              <Avatar name={context?.inviterName || ''} size="medium" />
+              <Avatar name={context?.inviterName || ''} size="md" />
               <View className="ml-3 flex-1">
                 <Text className="font-semibold text-neutral-800">
                   {context?.commitmentName}
                 </Text>
                 <Text className="text-neutral-500 text-sm">
-                  {t('success.supportingAs', { role: t(`roles.${context?.role.toLowerCase()}`) })}
+                  {isCustodian
+                    ? t('custodian.successTitle')
+                    : t('success.supportingAs', {
+                        role: t(`roles.${supporterRoleKey(context?.role)}`),
+                      })}
                 </Text>
               </View>
             </View>
@@ -244,7 +255,7 @@ export default function JoinScreen() {
 
           {/* CTA */}
           <Button
-            title={t('success.viewCommitment')}
+            title={isCustodian ? t('custodian.viewInbox') : t('success.viewCommitment')}
             onPress={handleGoToCommitments}
             fullWidth
           />
@@ -256,7 +267,7 @@ export default function JoinScreen() {
   // Preview state (main flow)
   return (
     <SafeScreen>
-      <Header title={t('title')} showBack />
+      <Header title={isCustodian ? t('custodian.title') : t('title')} showBack />
 
       <ScrollView
         className="flex-1"
@@ -267,17 +278,24 @@ export default function JoinScreen() {
         <View className="items-center mb-6">
           <Avatar
             name={context?.inviterName || ''}
-            uri={context?.inviterAvatarUrl}
-            size="large"
+            source={context?.inviterAvatarUrl}
+            size="lg"
           />
           <Text className="text-lg font-semibold mt-3 text-center">
-            {t('invitedBy', { name: context?.inviterName })}
+            {isCustodian
+              ? t('custodian.invitedBy', { name: context?.inviterName })
+              : t('invitedBy', { name: context?.inviterName })}
           </Text>
-          <Badge
-            label={t(`roles.${context?.role.toLowerCase()}`)}
-            variant={getRoleBadgeVariant(context?.role || '')}
-            className="mt-2"
-          />
+          <View className="mt-2">
+            <Badge
+              label={
+                isCustodian
+                  ? t('custodian.join')
+                  : t(`roles.${supporterRoleKey(context?.role)}`)
+              }
+              variant={isCustodian ? 'warning' : getRoleBadgeVariant(context?.role || '')}
+            />
+          </View>
         </View>
 
         {/* Supporter message */}
@@ -336,7 +354,9 @@ export default function JoinScreen() {
           {/* Role description */}
           <View className="bg-neutral-50 rounded-lg p-3">
             <Text className="text-sm text-neutral-600 text-center">
-              {t(`roleDescriptions.${context?.role.toLowerCase()}`)}
+              {isCustodian
+                ? t('custodian.description')
+                : t(`roleDescriptions.${supporterRoleKey(context?.role)}`)}
             </Text>
           </View>
         </Card>
@@ -360,7 +380,15 @@ export default function JoinScreen() {
         {/* Action buttons */}
         <View className="gap-3">
           <Button
-            title={isAuthenticated ? t('joinAsSupporter') : t('signUpToJoin')}
+            title={
+              isCustodian
+                ? isAuthenticated
+                  ? t('custodian.join')
+                  : t('custodian.signUp')
+                : isAuthenticated
+                  ? t('joinAsSupporter')
+                  : t('signUpToJoin')
+            }
             onPress={handleJoin}
             fullWidth
             loading={claimMutation.isPending}

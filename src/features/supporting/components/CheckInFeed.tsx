@@ -99,7 +99,7 @@ function CheckInItem({ checkIn, commitmentId, index }: CheckInItemProps) {
               style={[styles.statusBadge, { backgroundColor: statusStyle.bg }]}
             >
               <Text style={[styles.statusText, { color: statusStyle.color }]}>
-                {t(`checkIn.status_${checkIn.status.toLowerCase()}`)}
+                {t(`checkIn.status_${checkIn.status.toLowerCase() as 'completed' | 'skipped' | 'missed'}`)}
               </Text>
             </View>
           </View>

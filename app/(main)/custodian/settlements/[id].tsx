@@ -182,7 +182,7 @@ export default function SettlementDetailScreen() {
               <View style={[styles.recipientBadge, { backgroundColor: recipientConfig.bgColor }]}>
                 <Text style={styles.recipientEmoji}>{recipientConfig.emoji}</Text>
                 <Text style={[styles.recipientType, { color: recipientConfig.color }]}>
-                  {t(`settlements.recipientType.${settlement.recipientType.toLowerCase()}`)}
+                  {t(`settlements.recipientType.${settlement.recipientType.toLowerCase() as 'supporter' | 'charity' | 'appPool'}`)}
                 </Text>
               </View>
             </View>

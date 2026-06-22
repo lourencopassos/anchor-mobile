@@ -147,6 +147,7 @@
     "noCustodian": "Sem custodiante (automático)",
     "selectedCustodian": "Custodiante Selecionado",
     "remove": "Remover",
-    "custodianInfo": "Seu custodiante precisará confirmar o recebimento do seu depósito antes que seu compromisso se torne ativo."
+    "custodianInfo": "Seu custodiante precisará confirmar o recebimento do seu depósito antes que seu compromisso se torne ativo.",
+    "skipHint": "Ainda não tem um responsável pelo dinheiro? Você pode pular e atribuir ou convidar alguém depois na página do compromisso."
   }
 }

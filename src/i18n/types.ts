@@ -12,7 +12,9 @@ export type TranslationNamespace =
   | 'evaluations'
   | 'supporting'
   | 'home'
-  | 'claim';
+  | 'claim'
+  | 'invitation'
+  | 'custodian';
 
 // Resource types from JSON files
 type CommonResources = typeof import('./locales/en/common.json');
@@ -26,6 +28,8 @@ type EvaluationsResources = typeof import('./locales/en/evaluations.json');
 type SupportingResources = typeof import('./locales/en/supporting.json');
 type HomeResources = typeof import('./locales/en/home.json');
 type ClaimResources = typeof import('./locales/en/claim.json');
+type InvitationResources = typeof import('./locales/en/invitation.json');
+type CustodianResources = typeof import('./locales/en/custodian.json');
 
 // All resources type for reference
 export interface Resources {
@@ -40,6 +44,8 @@ export interface Resources {
   supporting: SupportingResources;
   home: HomeResources;
   claim: ClaimResources;
+  invitation: InvitationResources;
+  custodian: CustodianResources;
 }
 
 // Extend i18next - use returnNull: false and allowObjectInHTMLChildren for flexibility

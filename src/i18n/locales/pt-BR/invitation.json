@@ -51,5 +51,15 @@
     "selectRole": "Selecione a funcao para novos apoiadores",
     "maxUses": "Maximo de usos (opcional)",
     "maxUsesHint": "Deixe vazio para ilimitado"
+  },
+  "custodian": {
+    "invitedBy": "{{name}} pediu que você seja o responsável pelo dinheiro",
+    "description": "Você guardará o valor com segurança. Você confirma quando o depósito chega e, se o compromisso for quebrado, envia o pagamento. O app nunca retém os fundos.",
+    "join": "Tornar-se responsável pelo dinheiro",
+    "signUp": "Cadastre-se para guardar o valor",
+    "successTitle": "Você é o responsável pelo dinheiro!",
+    "successSubtitle": "Agora você guarda o valor do compromisso de {{name}}.",
+    "viewInbox": "Ir para a caixa do responsável",
+    "title": "Tornar-se Responsável"
   }
 }

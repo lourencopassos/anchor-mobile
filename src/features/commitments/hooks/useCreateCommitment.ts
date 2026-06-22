@@ -269,13 +269,10 @@ export function useCreateCommitment() {
         // Supporters step - can proceed with or without supporters
         return true;
       case 9:
-        // Custodian step - REQUIRED for the alpha (manual-deposit / custodian-only).
-        // A custodian holds the stake via PIX; without one there is no working
-        // payment path, so a custodian email must be provided to proceed.
-        return (
-          wizardData.custodianEmail !== null &&
-          wizardData.custodianEmail.trim().length > 0
-        );
+        // Custodian step - OPTIONAL. A custodian (money-holder) can be supplied now,
+        // or the commitment is created in PENDING_CUSTODIAN and a money-holder is
+        // assigned/invited later from the commitment page.
+        return true;
       case 10:
         // Verification settings - validate supporter requirements
         // If user selected a voting option that requires supporters, they must have at least one

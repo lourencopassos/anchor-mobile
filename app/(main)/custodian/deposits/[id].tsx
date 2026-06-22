@@ -227,7 +227,7 @@ export default function DepositDetailScreen() {
                 {TEMPLATE_EMOJIS[deposit.commitmentTemplateType] || '🎯'}
               </Text>
               <Text style={styles.commitmentType}>
-                {t(`commitments:templates.${deposit.commitmentTemplateType.toLowerCase()}`)}
+                {t(`commitments:templates.${deposit.commitmentTemplateType.toLowerCase() as 'quit_smoking' | 'exercise' | 'meditation' | 'diet' | 'sleep' | 'custom'}`)}
               </Text>
             </View>
 

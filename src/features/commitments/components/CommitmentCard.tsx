@@ -9,6 +9,7 @@ import Animated, {
 } from 'react-native-reanimated';
 import { LinearGradient } from 'expo-linear-gradient';
 import type { Commitment, TemplateType, CommitmentState, CommitmentFilterState } from '@api/types';
+import { commitmentStateKey } from '@/i18n/keyHelpers';
 import { haptics } from '@/shared/utils/haptics.utils';
 import { Icon } from '@shared/components/ui/Icon';
 import { ProgressRing } from '@shared/components/ui/ProgressRing';
@@ -158,7 +159,7 @@ export function CommitmentCard({ commitment, onCheckIn, variant = 'default', str
             <Text style={styles.gradientDaysLeft}>
               {commitment.state === 'ACTIVE'
                 ? t('detail.daysRemaining', { count: daysRemaining })
-                : t(`state.${commitment.state.toLowerCase()}`)}
+                : t(`state.${commitmentStateKey(commitment.state)}`)}
             </Text>
           </View>
         </LinearGradient>

@@ -18,6 +18,7 @@ import Animated, {
 } from 'react-native-reanimated';
 import type { SupportedCommitment } from '@api/types';
 import { SupporterRole, SupporterRelationshipState } from '@api/types';
+import { templateTypeKey, commitmentStateKey } from '@/i18n/keyHelpers';
 import { haptics } from '@/shared/utils/haptics.utils';
 import { Icon, ROLE_ICONS } from '@shared/components/ui/Icon';
 import { ProgressRing } from '@shared/components/ui/ProgressRing';
@@ -140,7 +141,7 @@ export function SupportedCommitmentCard({ commitment, onAcceptInvite, onDeclineI
                   color="#78716C"
                 />
                 <Text style={styles.templateText}>
-                  {tCommitments(`templates.${commitment.templateType.toLowerCase()}`)}
+                  {tCommitments(`templates.${templateTypeKey(commitment.templateType)}`)}
                 </Text>
               </View>
             </View>
@@ -186,7 +187,7 @@ export function SupportedCommitmentCard({ commitment, onAcceptInvite, onDeclineI
             <Text style={styles.daysText}>
               {commitment.state === 'ACTIVE'
                 ? t('card.daysRemaining', { count: daysRemaining })
-                : tCommitments(`state.${commitment.state.toLowerCase()}`)}
+                : tCommitments(`state.${commitmentStateKey(commitment.state)}`)}
             </Text>
           )}
         </View>

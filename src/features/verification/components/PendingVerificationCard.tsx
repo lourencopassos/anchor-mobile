@@ -106,7 +106,7 @@ function EvidenceBadge({ type }: { type: EvidenceType }) {
   };
 
   const config = evidenceConfig[type] || evidenceConfig.SELF_REPORT;
-  const label = t(`verification.card.evidence.${type.toLowerCase()}`);
+  const label = t(`verification.card.evidence.${type.toLowerCase() as 'self_report' | 'photo' | 'manual'}`);
 
   return (
     <View style={[styles.evidenceBadge, { backgroundColor: `${config.color}15` }]}>

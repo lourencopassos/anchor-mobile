@@ -15,6 +15,11 @@ const STATE_CONFIG: Record<
     bgColor: 'bg-neutral-100',
     textColor: 'text-neutral-600',
   },
+  PENDING_CUSTODIAN: {
+    label: 'Needs money-holder',
+    bgColor: 'bg-warning-100',
+    textColor: 'text-warning-700',
+  },
   PENDING_DEPOSIT: {
     label: 'Pending Deposit',
     bgColor: 'bg-warning-100',

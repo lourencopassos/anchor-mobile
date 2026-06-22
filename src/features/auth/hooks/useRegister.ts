@@ -16,8 +16,12 @@ interface UseRegisterResult {
 /**
  * Hook for user registration with TanStack Query mutation
  * Handles token storage and auth state management
+ *
+ * @param returnTo Optional in-app path to navigate to after a successful
+ *   registration (e.g. a `/join/:code` invite the user signed up to accept).
+ *   Must be a relative path starting with `/`; otherwise it is ignored.
  */
-export function useRegister(): UseRegisterResult {
+export function useRegister(returnTo?: string): UseRegisterResult {
   const router = useRouter();
   const queryClient = useQueryClient();
   const setUser = useAuthStore((state) => state.setUser);
@@ -51,8 +55,13 @@ export function useRegister(): UseRegisterResult {
       // Clear any cached queries to get fresh data
       queryClient.clear();
 
-      // Navigate to main app
-      router.replace('/(main)');
+      // Navigate back to the originating flow (e.g. an invite being claimed)
+      // when provided, otherwise to the main app.
+      if (returnTo && returnTo.startsWith('/')) {
+        router.replace(returnTo as never);
+      } else {
+        router.replace('/(main)');
+      }
     },
   });
 

@@ -51,5 +51,15 @@
     "selectRole": "Select role for new supporters",
     "maxUses": "Maximum uses (optional)",
     "maxUsesHint": "Leave empty for unlimited"
+  },
+  "custodian": {
+    "invitedBy": "{{name}} asked you to be the money-holder",
+    "description": "You'll safely hold the staked amount. You confirm when the deposit arrives, and if the commitment breaks you send the payout. Funds are never held by the app.",
+    "join": "Become the money-holder",
+    "signUp": "Sign up to hold the stake",
+    "successTitle": "You're the money-holder!",
+    "successSubtitle": "You're now holding the stake for {{name}}'s commitment.",
+    "viewInbox": "Go to custodian inbox",
+    "title": "Join as Money-Holder"
   }
 }

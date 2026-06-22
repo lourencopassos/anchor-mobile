@@ -8,6 +8,7 @@ import i18n from '@i18n/index';
 // CommitmentResponseDto state values (from CreateCommitmentResponseDto)
 export type CommitmentState =
   | 'DRAFT'
+  | 'PENDING_CUSTODIAN'  // Custodian mode: created without a money-holder yet
   | 'PENDING_DEPOSIT'  // Custodian mode: awaiting deposit confirmation
   | 'ACTIVE'
   | 'COMPLETED'

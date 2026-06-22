@@ -123,6 +123,7 @@ export function CustodianStep({
           {inputError && (
             <Text style={styles.errorText}>{inputError}</Text>
           )}
+          <Text style={styles.skipHint}>{t('wizard.skipHint')}</Text>
         </Animated.View>
       )}
 
@@ -293,6 +294,13 @@ const styles = StyleSheet.create({
     fontSize: 13,
     color: COLORS.error,
     marginTop: 8,
+  },
+  skipHint: {
+    fontFamily: 'PlusJakartaSans_400Regular',
+    fontSize: 13,
+    lineHeight: 19,
+    color: COLORS.neutral500,
+    marginTop: 12,
   },
 
   // Selected Card

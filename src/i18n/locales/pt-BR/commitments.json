@@ -16,8 +16,11 @@
     "broken": "Quebrados"
   },
   "state": {
+    "scheduled": "Agendado",
+    "pending_payment": "Aguardando depósito",
     "draft": "Rascunho",
-    "pending_payment": "Pagamento Pendente",
+    "pending_deposit": "Aguardando depósito",
+    "pending_custodian": "Precisa de um responsável pelo dinheiro",
     "active": "Ativo",
     "completed": "Concluído",
     "broken": "Quebrado",
@@ -163,6 +166,7 @@
   "detail": {
     "progress": "Progresso",
     "supporters": "Apoiadores",
+    "invite": "Convidar pessoas",
     "activity": "Atividade",
     "history": "Histórico",
     "checkIn": "Registrar",
@@ -203,11 +207,12 @@
       "stakeDeposited": "Depósito realizado",
       "inviteSupporters": "Convidar apoiadores",
       "setupReminders": "Configurar lembretes"
+    },
+    "assignCustodian": {
+      "title": "Este compromisso precisa de um responsável pelo dinheiro",
+      "body": "Atribua uma pessoa de confiança para guardar seu valor, ou compartilhe um link de convite para que ela participe e crie a conta.",
+      "cta": "Configurar responsável"
     }
-  },
-  "state": {
-    "scheduled": "Agendado",
-    "pending_payment": "Aguardando depósito"
   },
   "cancelDraft": {
     "explainer": "Este compromisso não foi concluído e não pode ser ativado.",
@@ -291,6 +296,43 @@
       "title": "Voto Unânime",
       "short": "Unânime",
       "description": "Todos os apoiadores devem concordar para marcar seu compromisso como falha."
+    }
+  },
+  "invite": {
+    "title": "Convidar pessoas",
+    "subtitle": "Compartilhe um link para que outras pessoas apoiem este compromisso. Elas verão do que se trata e o que está em jogo, e então criam uma conta para participar.",
+    "roleLabel": "Vão participar como",
+    "roles": {
+      "verifier": "Verificador",
+      "encourager": "Incentivador",
+      "observer": "Observador"
+    },
+    "roleDescriptions": {
+      "verifier": "Pode confirmar ou contestar seus check-ins.",
+      "encourager": "Pode te incentivar e reagir aos seus check-ins.",
+      "observer": "Pode acompanhar seu progresso."
+    },
+    "generate": "Gerar link",
+    "activeLinks": "Links ativos",
+    "noLinks": "Nenhum link ativo ainda. Gere um para começar a convidar.",
+    "copy": "Copiar",
+    "copied": "Copiado!",
+    "share": "Compartilhar",
+    "deactivate": "Desativar link",
+    "usesUnlimited": "{{count}} participaram",
+    "usesLimited": "{{current}}/{{max}} participaram",
+    "shareMessage": "Apoie meu compromisso no Anchor: {{url}}",
+    "custodian": {
+      "title": "Configurar um responsável pelo dinheiro",
+      "subtitle": "Atribua uma pessoa de confiança para guardar seu valor. Ela confirma seu depósito e, se o compromisso for quebrado, envia o pagamento. Você pode inserir o e-mail diretamente ou compartilhar um link de convite para que ela crie uma conta e participe.",
+      "emailLabel": "E-mail do responsável",
+      "emailPlaceholder": "pessoa@exemplo.com",
+      "assign": "Atribuir responsável",
+      "invalidEmail": "Insira um e-mail válido.",
+      "assignError": "Não foi possível atribuir o responsável. Tente novamente.",
+      "orShareLink": "ou compartilhe um link de convite",
+      "generateLink": "Gerar link de responsável",
+      "linkExplainer": "Quem abrir este link será convidado a se tornar o responsável pelo dinheiro deste compromisso."
     }
   }
 }

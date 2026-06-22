@@ -16,8 +16,11 @@
     "broken": "Broken"
   },
   "state": {
+    "scheduled": "Scheduled",
+    "pending_payment": "Pending deposit",
     "draft": "Draft",
-    "pending_payment": "Pending Payment",
+    "pending_deposit": "Pending deposit",
+    "pending_custodian": "Needs a money-holder",
     "active": "Active",
     "completed": "Completed",
     "broken": "Broken",
@@ -163,6 +166,7 @@
   "detail": {
     "progress": "Progress",
     "supporters": "Supporters",
+    "invite": "Invite people",
     "activity": "Activity",
     "history": "History",
     "checkIn": "Check In",
@@ -203,11 +207,12 @@
       "stakeDeposited": "Stake deposited",
       "inviteSupporters": "Invite supporters",
       "setupReminders": "Set up reminders"
+    },
+    "assignCustodian": {
+      "title": "This commitment needs a money-holder",
+      "body": "Assign a trusted person to hold your stake, or share an invite link so they can join and create their account.",
+      "cta": "Set up money-holder"
     }
-  },
-  "state": {
-    "scheduled": "Scheduled",
-    "pending_payment": "Pending deposit"
   },
   "cancelDraft": {
     "explainer": "This commitment wasn't completed and can't be activated.",
@@ -291,6 +296,43 @@
       "title": "Unanimous Vote",
       "short": "Unanimous",
       "description": "All supporters must agree to mark your commitment as failed."
+    }
+  },
+  "invite": {
+    "title": "Invite people",
+    "subtitle": "Share a link so others can support this commitment. They'll see what it's about and what's at stake, then create an account to join.",
+    "roleLabel": "They'll join as",
+    "roles": {
+      "verifier": "Verifier",
+      "encourager": "Encourager",
+      "observer": "Observer"
+    },
+    "roleDescriptions": {
+      "verifier": "Can confirm or dispute your check-ins.",
+      "encourager": "Can cheer you on and react to your check-ins.",
+      "observer": "Can follow your progress."
+    },
+    "generate": "Generate link",
+    "activeLinks": "Active links",
+    "noLinks": "No active links yet. Generate one to start inviting.",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "share": "Share",
+    "deactivate": "Deactivate link",
+    "usesUnlimited": "{{count}} joined",
+    "usesLimited": "{{current}}/{{max}} joined",
+    "shareMessage": "Support my commitment on Anchor: {{url}}",
+    "custodian": {
+      "title": "Set up a money-holder",
+      "subtitle": "Assign a trusted person to hold your stake. They confirm your deposit and, if the commitment breaks, send the payout. You can enter their email directly, or share an invite link so they create an account and join.",
+      "emailLabel": "Money-holder's email",
+      "emailPlaceholder": "them@example.com",
+      "assign": "Assign money-holder",
+      "invalidEmail": "Please enter a valid email address.",
+      "assignError": "Couldn't assign the money-holder. Please try again.",
+      "orShareLink": "or share an invite link",
+      "generateLink": "Generate custodian link",
+      "linkExplainer": "Whoever opens this link is asked to become the money-holder for this commitment."
     }
   }
 }

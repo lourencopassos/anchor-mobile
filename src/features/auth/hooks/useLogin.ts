@@ -16,8 +16,12 @@ interface UseLoginResult {
 /**
  * Hook for user login with TanStack Query mutation
  * Handles token storage and auth state management
+ *
+ * @param returnTo Optional in-app path to navigate to after a successful login
+ *   (e.g. a `/join/:code` invite the user is mid-claim on). Must be a relative
+ *   path starting with `/`; otherwise it is ignored and the user lands in the app.
  */
-export function useLogin(): UseLoginResult {
+export function useLogin(returnTo?: string): UseLoginResult {
   const router = useRouter();
   const queryClient = useQueryClient();
   const setUser = useAuthStore((state) => state.setUser);
@@ -51,8 +55,13 @@ export function useLogin(): UseLoginResult {
       // Clear any cached queries to get fresh data
       queryClient.clear();
 
-      // Navigate to main app
-      router.replace('/(main)');
+      // Navigate back to the originating flow (e.g. an invite being claimed)
+      // when provided, otherwise to the main app.
+      if (returnTo && returnTo.startsWith('/')) {
+        router.replace(returnTo as never);
+      } else {
+        router.replace('/(main)');
+      }
     },
   });
 

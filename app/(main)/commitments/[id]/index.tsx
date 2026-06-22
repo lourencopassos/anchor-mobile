@@ -251,21 +251,38 @@ export default function CommitmentDetailScreen() {
             showDates
           />
 
-          {/* Navigation - Just Supporters for future */}
-          <Pressable
-            onPress={() =>
-              router.push({
-                pathname: '/(main)/commitments/[id]/supporters',
-                params: { id: id! },
-              })
-            }
-            className="bg-white p-4 rounded-xl border border-neutral-200 flex-row justify-between items-center mb-6"
-          >
-            <Text className="text-base text-neutral-900">
-              👥 {t('detail.supporters')}
-            </Text>
-            <Text className="text-neutral-400">→</Text>
-          </Pressable>
+          {/* Navigation - Supporters + Invite for future */}
+          <View className="gap-3 mb-6">
+            <Pressable
+              onPress={() =>
+                router.push({
+                  pathname: '/(main)/commitments/[id]/supporters',
+                  params: { id: id! },
+                })
+              }
+              className="bg-white p-4 rounded-xl border border-neutral-200 flex-row justify-between items-center"
+            >
+              <Text className="text-base text-neutral-900">
+                👥 {t('detail.supporters')}
+              </Text>
+              <Text className="text-neutral-400">→</Text>
+            </Pressable>
+
+            <Pressable
+              onPress={() =>
+                router.push({
+                  pathname: '/(main)/commitments/[id]/invite',
+                  params: { id: id! },
+                })
+              }
+              className="bg-white p-4 rounded-xl border border-neutral-200 flex-row justify-between items-center"
+            >
+              <Text className="text-base text-neutral-900">
+                🔗 {t('detail.invite')}
+              </Text>
+              <Text className="text-neutral-400">→</Text>
+            </Pressable>
+          </View>
         </ScrollView>
 
         {/* Modals */}
@@ -408,6 +425,21 @@ export default function CommitmentDetailScreen() {
           <Pressable
             onPress={() =>
               router.push({
+                pathname: '/(main)/commitments/[id]/invite',
+                params: { id: id! },
+              })
+            }
+            className="bg-white p-4 rounded-xl border border-neutral-200 flex-row justify-between items-center"
+          >
+            <Text className="text-base text-neutral-900">
+              🔗 {t('detail.invite')}
+            </Text>
+            <Text className="text-neutral-400">→</Text>
+          </Pressable>
+
+          <Pressable
+            onPress={() =>
+              router.push({
                 pathname: '/(main)/commitments/[id]/activity',
                 params: { id: id! },
               })
@@ -434,6 +466,37 @@ export default function CommitmentDetailScreen() {
               onPress={handleReportFailure}
               variant="outline"
               fullWidth
+            />
+          </View>
+        )}
+
+        {/* Pending custodian — created without a money-holder yet */}
+        {commitment.state === 'PENDING_CUSTODIAN' && (
+          <View className="gap-3 mb-6">
+            <Card variant="outlined" className="bg-warning-50">
+              <Text className="text-base font-semibold text-neutral-900 mb-1">
+                {t('detail.assignCustodian.title')}
+              </Text>
+              <Text className="text-sm text-neutral-600">
+                {t('detail.assignCustodian.body')}
+              </Text>
+            </Card>
+            <Button
+              title={t('detail.assignCustodian.cta')}
+              onPress={() =>
+                router.push({
+                  pathname: '/(main)/commitments/[id]/invite',
+                  params: { id: id!, mode: 'custodian' },
+                })
+              }
+              fullWidth
+            />
+            <Button
+              title={t('cancelDraft.button')}
+              onPress={handleCancelDraft}
+              variant="outline"
+              fullWidth
+              disabled={cancelMutation.isPending}
             />
           </View>
         )}

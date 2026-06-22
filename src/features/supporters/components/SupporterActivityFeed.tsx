@@ -106,7 +106,7 @@ function SectionHeader({ group }: { group: string }) {
     <View style={styles.sectionHeader}>
       <Text style={styles.sectionIcon}>{icons[group] || '📌'}</Text>
       <Text style={styles.sectionTitle} className="text-neutral-700">
-        {t(`activity.groups.${group}`)}
+        {t(`activity.groups.${group as 'today' | 'yesterday' | 'thisWeek' | 'earlier'}`)}
       </Text>
     </View>
   );
