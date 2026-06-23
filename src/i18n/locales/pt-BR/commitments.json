@@ -296,7 +296,8 @@
       "title": "Voto Unânime",
       "short": "Unânime",
       "description": "Todos os apoiadores devem concordar para marcar seu compromisso como falha."
-    }
+    },
+    "inviteSupportersLater": "Você pode convidar apoiadores depois, na página do compromisso."
   },
   "invite": {
     "title": "Convidar pessoas",

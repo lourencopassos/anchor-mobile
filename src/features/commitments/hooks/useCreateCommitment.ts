@@ -274,12 +274,9 @@ export function useCreateCommitment() {
         // assigned/invited later from the commitment page.
         return true;
       case 10:
-        // Verification settings - validate supporter requirements
-        // If user selected a voting option that requires supporters, they must have at least one
-        const requiresSupporters = wizardData.verificationAuthorityType !== 'SELF_ONLY';
-        if (requiresSupporters && wizardData.pendingSupporters.length === 0) {
-          return false;
-        }
+        // Verification settings — the verification RULE is set at creation
+        // regardless of supporters. Supporters can be invited later from the
+        // commitment page, so any authority type is allowed with zero supporters.
         return true;
       case 11:
         // Review step - always can proceed

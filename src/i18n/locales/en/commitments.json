@@ -296,7 +296,8 @@
       "title": "Unanimous Vote",
       "short": "Unanimous",
       "description": "All supporters must agree to mark your commitment as failed."
-    }
+    },
+    "inviteSupportersLater": "You can invite supporters later from the commitment page."
   },
   "invite": {
     "title": "Invite people",

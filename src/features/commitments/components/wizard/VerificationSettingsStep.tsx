@@ -89,16 +89,13 @@ export function VerificationSettingsStep({
       <View className="gap-3">
         {AUTHORITY_OPTIONS.map((option) => {
           const isSelected = selectedAuthority === option.value;
-          const isDisabled = option.requiresSupporters && !hasSupporters;
           const requiredVotes = getRequiredVotes(option.value);
 
           return (
             <Pressable
               key={option.value}
-              onPress={() => !isDisabled && onSelectAuthority(option.value)}
-              disabled={isDisabled}
+              onPress={() => onSelectAuthority(option.value)}
               className="active:scale-[0.98]"
-              style={{ opacity: isDisabled ? 0.5 : 1 }}
             >
               <View
                 className={`
@@ -164,12 +161,13 @@ export function VerificationSettingsStep({
                       {t(`verification.${option.value.toLowerCase()}.description` as any)}
                     </Text>
 
-                    {/* Supporters Required Warning */}
+                    {/* Soft hint: this rule needs supporters, which can be
+                        invited later from the commitment page. */}
                     {option.requiresSupporters && !hasSupporters && (
                       <View className="flex-row items-center gap-1.5 mt-2">
-                        <Text className="text-amber-600 text-xs">⚠️</Text>
-                        <Text className="text-amber-600 text-xs font-medium">
-                          {t('verification.requiresSupporters')}
+                        <Text className="text-neutral-400 text-xs">💡</Text>
+                        <Text className="text-neutral-500 text-xs">
+                          {t('verification.inviteSupportersLater')}
                         </Text>
                       </View>
                     )}
