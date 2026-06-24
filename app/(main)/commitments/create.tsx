@@ -130,10 +130,19 @@ export default function CreateCommitmentScreen() {
         return;
       }
 
-      // Custodian mode: navigate to deposit screen
-      if (response?.custodyMode === 'MANUAL' && response?.id) {
+      // Manual-custody routing by state:
+      //  - PENDING_DEPOSIT: a custodian is already set -> go pay the deposit.
+      //  - PENDING_CUSTODIAN: no money-holder yet -> open the commitment so the
+      //    creator can assign/invite one (the deposit doesn't exist yet, so the
+      //    deposit screen would 404).
+      if (response?.id && response.state === 'PENDING_DEPOSIT') {
         router.replace({
           pathname: "/(main)/commitments/[id]/deposit",
+          params: { id: response.id },
+        });
+      } else if (response?.id && response.state === 'PENDING_CUSTODIAN') {
+        router.replace({
+          pathname: "/(main)/commitments/[id]",
           params: { id: response.id },
         });
       } else if (
