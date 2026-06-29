@@ -61,7 +61,7 @@ export default function CommitmentDetailScreen() {
   const [showReportFailureModal, setShowReportFailureModal] = useState(false);
 
   const queryClient = useQueryClient();
-  const { data: commitment, isLoading, error, refetch } = useCommitment(id);
+  const { data: commitment, isLoading, isFetching, error, refetch } = useCommitment(id);
 
   const cancelMutation = useMutation({
     mutationFn: () => commitmentsApi.cancel(id),
@@ -92,15 +92,18 @@ export default function CommitmentDetailScreen() {
     commitment?.state === 'BROKEN' ? id : undefined
   );
 
-  // Auto-redirect to deposit screen for PENDING_DEPOSIT commitments
+  // Auto-redirect to deposit screen for PENDING_DEPOSIT commitments.
+  // Only redirect once we have fresh data (!isFetching) — otherwise a stale
+  // cached PENDING_DEPOSIT would bounce the user back to the deposit screen
+  // even after the deposit was confirmed and the commitment is ACTIVE.
   useEffect(() => {
-    if (commitment?.state === 'PENDING_DEPOSIT' && id) {
+    if (!isFetching && commitment?.state === 'PENDING_DEPOSIT' && id) {
       router.replace({
         pathname: '/(main)/commitments/[id]/deposit',
         params: { id },
       });
     }
-  }, [commitment?.state, id, router]);
+  }, [commitment?.state, isFetching, id, router]);
 
   // Determine if this is a future commitment (hasn't started yet)
   const isFutureCommitment = useMemo(() => {
@@ -359,13 +362,13 @@ export default function CommitmentDetailScreen() {
             <View className="flex-row justify-between mb-2">
               <Text className="text-neutral-600">{t('detail.metadata.startDate')}</Text>
               <Text className="text-neutral-900 font-medium">
-                {new Date(commitment.currentCycle.startDate).toLocaleDateString()}
+                {parseISO(commitment.currentCycle.startDate).toLocaleDateString()}
               </Text>
             </View>
             <View className="flex-row justify-between mb-2">
               <Text className="text-neutral-600">{t('detail.metadata.endDate')}</Text>
               <Text className="text-neutral-900 font-medium">
-                {new Date(commitment.currentCycle.endDate).toLocaleDateString()}
+                {parseISO(commitment.currentCycle.endDate).toLocaleDateString()}
               </Text>
             </View>
             <View className="flex-row justify-between">

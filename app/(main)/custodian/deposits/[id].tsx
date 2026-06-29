@@ -7,7 +7,7 @@ import {
   ActivityIndicator,
   StyleSheet,
 } from 'react-native';
-import { useLocalSearchParams, useRouter } from 'expo-router';
+import { useLocalSearchParams } from 'expo-router';
 import { useTranslation } from 'react-i18next';
 import Animated, { FadeIn, FadeInDown } from 'react-native-reanimated';
 import { Ionicons } from '@expo/vector-icons';
@@ -58,7 +58,6 @@ const TEMPLATE_EMOJIS: Record<string, string> = {
 export default function DepositDetailScreen() {
   useHideTabBar();
   const { id } = useLocalSearchParams<{ id: string }>();
-  const router = useRouter();
   const { t } = useTranslation(['custodian', 'commitments']);
   const insets = useSafeAreaInsets();
 
@@ -87,7 +86,10 @@ export default function DepositDetailScreen() {
         onSuccess: () => {
           haptics.medium();
           setShowConfirmModal(false);
-          router.back();
+          // Stay on this screen: the invalidated detail query refetches to
+          // RECEIVED_CONFIRMED_BY_CUSTODIAN, hiding the action buttons and
+          // showing the "Confirmed ✓" status + timeline. Popping back here used
+          // to drop the custodian into an empty inbox ("commitment vanished").
         },
       }
     );
@@ -105,7 +107,8 @@ export default function DepositDetailScreen() {
         onSuccess: () => {
           haptics.medium();
           setShowRejectModal(false);
-          router.back();
+          // Stay on this screen: the detail refetches to REJECTED_BY_CUSTODIAN
+          // and shows the rejected status, instead of popping into an empty inbox.
         },
       }
     );

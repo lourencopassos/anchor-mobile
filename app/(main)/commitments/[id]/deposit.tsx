@@ -27,8 +27,11 @@ import { Header } from '@/shared/components/layout/Header';
 import { Card } from '@/shared/components/ui/Card';
 import { Button } from '@/shared/components/ui/Button';
 import { Modal } from '@/shared/components/ui/Modal';
+import { useQueryClient } from '@tanstack/react-query';
 import { useDepositStatus } from '@/features/commitments/hooks/useDepositStatus';
 import { useMarkDepositPaid } from '@/features/commitments/hooks/useMarkDepositPaid';
+import { COMMITMENTS_QUERY_KEY } from '@/features/commitments/hooks/useCommitments';
+import { SUPPORTED_COMMITMENTS_KEY } from '@/features/supporting/hooks/useSupportedCommitments';
 import { formatCurrency } from '@/shared/utils/format.utils';
 import { haptics } from '@/shared/utils/haptics.utils';
 import { useHideTabBar } from '@/shared/contexts/TabBarVisibilityContext';
@@ -64,6 +67,7 @@ export default function DepositRequiredScreen() {
   const router = useRouter();
   const { t } = useTranslation('custodian');
 
+  const queryClient = useQueryClient();
   const { data: deposit, isLoading, error, refetch } = useDepositStatus(id);
   const { mutate: markPaid, isPending: isMarkingPaid } = useMarkDepositPaid();
 
@@ -72,15 +76,20 @@ export default function DepositRequiredScreen() {
   const [showConfirmModal, setShowConfirmModal] = useState(false);
   const [copiedKey, setCopiedKey] = useState(false);
 
-  // Auto-redirect when confirmed
+  // Auto-redirect when confirmed.
+  // Invalidate the commitment (now ACTIVE) and the supporting list first, so the
+  // detail screen reads fresh state and does not bounce straight back here on a
+  // stale PENDING_DEPOSIT cache (the redirect-loop bug).
   useEffect(() => {
     if (deposit?.status === 'RECEIVED_CONFIRMED_BY_CUSTODIAN') {
+      queryClient.invalidateQueries({ queryKey: [...COMMITMENTS_QUERY_KEY, id] });
+      queryClient.invalidateQueries({ queryKey: SUPPORTED_COMMITMENTS_KEY });
       const timer = setTimeout(() => {
         router.replace(`/(main)/commitments/${id}`);
       }, 2000);
       return () => clearTimeout(timer);
     }
-  }, [deposit?.status, id, router]);
+  }, [deposit?.status, id, router, queryClient]);
 
   const handleCopyPixKey = async () => {
     if (deposit?.custodianPixKey) {

@@ -4,6 +4,7 @@ export default function CommitmentDetailLayout() {
   return (
     <Stack screenOptions={{ headerShown: false }}>
       <Stack.Screen name="index" />
+      <Stack.Screen name="deposit" />
       <Stack.Screen name="check-in" />
       <Stack.Screen name="supporters" />
       <Stack.Screen name="invite" />

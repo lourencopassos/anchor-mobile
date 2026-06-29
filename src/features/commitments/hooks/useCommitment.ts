@@ -8,6 +8,9 @@ export function useCommitment(id: string | undefined) {
     queryFn: () => commitmentsApi.get(id!),
     enabled: !!id,
     staleTime: 2 * 60 * 1000, // 2 minutes
+    // Always refetch on mount so the detail screen decides redirects (e.g.
+    // PENDING_DEPOSIT → deposit) off fresh state, never a stale cached value.
+    refetchOnMount: 'always',
   });
 }
 
